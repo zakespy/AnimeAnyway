@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&display=swap');
+
+.custom-shape-divider-bottom-1671370168 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.custom-shape-divider-bottom-1671370168 .shape-fill {
+    fill: #ffffff;
+    /* fill: #00000000; */
+}
+
+.channelHeader{
+    height: 600px;
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+    background-image: url("../../cl2.png");
+    background-color: rgba(255,255,255,0.2);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    top:50px;
+}
+
+
+
+.channelName {
+    /* display: flex; */
+    
+    text-align: center;
+    margin-top:244px;
+    /* font-size: xx-large; */
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    
+    /* font-family: 'Poppins', sans-serif; */
+}
