@@ -22,7 +22,7 @@
     justify-content: center;
     /* background-color: aqua; */
     background-image: url("../../cl2.png");
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
     background-blend-mode: lighten;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,6 +40,8 @@
     /* font-size: xx-large; */
     font-family: 'Dancing Script', cursive;
     font-size: 100px;
+    color:white;
+    text-shadow: 2px 2px 8px black ;
     
     /* font-family: 'Poppins', sans-serif; */
 }

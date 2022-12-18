@@ -6,6 +6,7 @@ export default function Footer(){
       <>
         <div className="ChannelFooter">
             footer
+            {/* wavey part */}
           <div class="custom-shape-divider-top-1671373515">
             <svg
               data-name="Layer 1"
