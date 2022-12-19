@@ -5,9 +5,20 @@ export default function Footer(){
     return (
       <>
         <div className="ChannelFooter">
-            footer
+            <div className="footerInfo">
+                <div className="channel-info">
+                    <h1>Anime Anyway</h1>
+                    <h3>Channel for all Classroom of elite novel and translation</h3>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi voluptatum nulla eligendi doloribus recusandae voluptates minima incidunt ducimus quo exercitationem, corrupti laboriosam illo libero, sequi, quae optio deleniti consequatur?</h3>
+                </div>
+                <div className="creator-info">
+                    <h2>Company name</h2>
+                </div>
+            </div>
+            <div className="lastImage">
+            </div>
             {/* wavey part */}
-          <div class="custom-shape-divider-top-1671373515">
+          {/* <div class="custom-shape-divider-top-1671373515">
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +30,7 @@ export default function Footer(){
                 class="shape-fill"
               ></path>
             </svg>
-          </div>
+          </div> */}
         </div>
       </>
     );
