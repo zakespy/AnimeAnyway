@@ -1,7 +1,8 @@
 .main-container {
     height: fit-content;
     width:80%;
-    background-color: rgb(228 184 188);
+    /* background-color: rgb(228 184 188); */
+    background-color: rgba(244,146,152, 0.5 );
     margin:auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -10,17 +11,22 @@
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     
 }
 
 .link-container {
     margin: 1rem;
-    height: 70vh;
+    padding: 1rem;
+    /* height: 70vh; */
+    height: fit-content;
     width: 68%;
+    max-width: 68%;
     background: rgba(255, 255, 255, 0.548);
     z-index: 10;
     border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .info-container {

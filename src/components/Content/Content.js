@@ -12,7 +12,11 @@ export default function Content(){
             <div className="main-container">
                 
                 <div className="link-container">
-
+                    {
+                        volumes.map( (vol) => {
+                            return <h3>{vol}</h3>
+                        } )
+                    }                    
                 </div>
 
                 <div className="info-container">
