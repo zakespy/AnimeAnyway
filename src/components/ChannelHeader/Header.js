@@ -1,16 +1,18 @@
 import React from "react";
-import './HeaderStyle.css'
+import './HeaderStyle.css';
+import headerImage from "../../cl2-header.png"
 
 export default function Header(){
     return (
       <>
         <div className="channelHeader">
+          <img className="header-image" src={headerImage} alt="" />
           <div className="channelName">
               Anime Anyway
             
           </div>
           {/* wavey part */}
-          <div class="custom-shape-divider-bottom-1671370168">
+          {/* <div class="custom-shape-divider-bottom-1671370168">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +24,7 @@ export default function Header(){
               class="shape-fill"
             ></path>
           </svg>
-          </div>
+          </div> */}
         </div>     
       </>
     );
