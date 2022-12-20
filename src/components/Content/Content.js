@@ -13,9 +13,12 @@ export default function Content(){
                 
                 <div className="link-container">
                     {
-                        volumes.map( (vol) => {
-                            return <h3>{vol}</h3>
-                        } )
+                        volumes.map( (vol) => (
+                            <h3>
+                                {vol}
+                                <hr></hr>
+                            </h3>
+                         ) )
                     }                    
                 </div>
 
