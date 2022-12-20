@@ -9,7 +9,6 @@ export default function Header(){
               Anime Anyway
             
           </div>
-          
           {/* wavey part */}
           <div class="custom-shape-divider-bottom-1671370168">
           <svg
