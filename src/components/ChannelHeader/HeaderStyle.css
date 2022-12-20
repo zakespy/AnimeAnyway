@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&display=swap');
 
-.custom-shape-divider-bottom-1671370168 {
+/* .custom-shape-divider-bottom-1671370168 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -11,8 +11,8 @@
 }
 .custom-shape-divider-bottom-1671370168 .shape-fill {
     fill: #ffffff;
-    /* fill: #00000000; */
-}
+    fill: #00000000;
+} */
 
 .channelHeader{
     height: 600px;
@@ -20,7 +20,8 @@
     position: relative;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.80)), url("../../cl2.png");
+    /* background: linear-gradient(to bottom,rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.80)), url("../../cl2-edited.png"); */
+    background-image: url("../../cl2-edited.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
