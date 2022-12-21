@@ -6,10 +6,8 @@ export default function Header(){
     return (
       <>
         <div className="channelHeader">
-          <img className="header-image" src={headerImage} alt="" />
           <div className="channelName">
               Anime Anyway
-            
           </div>
           {/* wavey part */}
           {/* <div class="custom-shape-divider-bottom-1671370168">
