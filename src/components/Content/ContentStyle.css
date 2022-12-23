@@ -28,7 +28,7 @@
     width: 68%;
     max-width: 68%;
     /* background: rgba(255, 255, 255, 0.548); */
-    background: rgba(255, 181, 181, 0.548);
+    /* background: rgba(255, 181, 181, 0.548); */
     z-index: 10;
     border-radius: 1rem;
     display: flex;
@@ -42,5 +42,19 @@
     background: rgba(251, 255, 0, 0.467);
     z-index: 10;
     border-radius: 1rem;
+    
+}
 
+.volume-url {
+    margin: 1px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #d7d7d7;
+    border-radius: 0.5rem;
+}
+.volume-url:hover {
+    /* background: #d5d5d5; */
+    border: 2px solid #d4d4d4;
 }

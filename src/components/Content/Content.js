@@ -14,10 +14,10 @@ export default function Content(){
                 <div className="link-container">
                     {
                         volumes.map( (vol) => (
-                            <h3>
+                            <div className="volume-url" style={{ background: `${volumes.indexOf(vol) % 2 ? "rgba(245, 245, 245, 0.8)" : "rgba(255, 255, 255, 0.8)"}` }} >
                                 {vol}
-                                <hr></hr>
-                            </h3>
+                                {/* <hr></hr> */}
+                            </div>
                          ) )
                     }                    
                 </div>
