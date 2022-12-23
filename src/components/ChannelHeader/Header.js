@@ -1,6 +1,6 @@
 import React from "react";
 import './HeaderStyle.css';
-import headerImage from "../../cl2-header.png"
+// import headerImage from "../../cl2-header.png"
 
 export default function Header(){
     return (
