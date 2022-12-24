@@ -14,35 +14,38 @@
     fill: #00000000;
 } */
 
-.channelHeader{
-    height: 600px;
-    width: 80%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    /* background: linear-gradient(to bottom,rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.80)); */
-    /* background-image: url("../../cl2-edited.png"); */
-    background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.20) 30% , rgba(0, 0, 0, 0.40) 55%, rgba(0, 0, 0, 0.20) 90% ,rgba(255, 255, 255, 0) 100%) ,url("../../cl2-header.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: auto;
-    top:50px;
-}
 
-
-
-
-.channelName {
-    /* display: flex; */
-    text-align: center;
-    margin-top:244px;
-    /* font-size: xx-large; */
-    font-family: 'Dancing Script', cursive;
-    font-size: 100px;
-    color:white;
-    text-shadow: 2px 2px 8px black ;
-    position: absolute;
-    /* font-family: 'Poppins', sans-serif; */
+@media(min-width:1440px){
+    .channelHeader {
+            height: 600px;
+            width: 80%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            /* background: linear-gradient(to bottom,rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.80)); */
+            /* background-image: url("../../cl2-edited.png"); */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.20) 30%, rgba(0, 0, 0, 0.40) 55%, rgba(0, 0, 0, 0.20) 90%, rgba(255, 255, 255, 0) 100%), url("../../cl2-header.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: auto;
+            top: 50px;
+        }
+    
+    
+    
+    
+        .channelName {
+            /* display: flex; */
+            text-align: center;
+            margin-top: 244px;
+            /* font-size: xx-large; */
+            font-family: 'Dancing Script', cursive;
+            font-size: 100px;
+            color: white;
+            text-shadow: 2px 2px 8px black;
+            position: absolute;
+            /* font-family: 'Poppins', sans-serif; */
+        }
 }
 
 @media screen and (max-width:1440px){
@@ -53,12 +56,42 @@
         /* position: inherit; */
         display: flex;
         justify-content: center;
-        /* margin: auto; */
-        top: 50px;
+        margin: 0px;
+        /* top: 50px; */
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.20) 30%, rgba(0, 0, 0, 0.40) 55%, rgba(0, 0, 0, 0.20) 90%, rgba(255, 255, 255, 0) 100%), url("../../cl2-header.png");
         background-repeat: no-repeat;
             /* background-size: contain; */
         background-position: center;
 
     }
+        .channelName {
+            /* display: flex; */
+            text-align: center;
+            margin-top: 200px;
+            /* font-size: xx-large; */
+            font-family: 'Dancing Script', cursive;
+            font-size: 100px;
+            color: white;
+            text-shadow: 2px 2px 8px black;
+            position: absolute;
+            /* font-family: 'Poppins', sans-serif; */
+        }
 }
+
+/* @media screen and (max-width: 540px) {
+    .channelHeader {
+            
+            height: 600px;
+            width: 100%;
+            
+            display: flex;
+            justify-content: center;
+            margin: 0px;
+            top: 50px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.20) 30%, rgba(0, 0, 0, 0.40) 55%, rgba(0, 0, 0, 0.20) 90%, rgba(255, 255, 255, 0) 100%), url("../../cl2-header.png");
+            background-repeat: no-repeat;
+            
+            background-position: center;
+    
+        }
+} */
