@@ -1,6 +1,6 @@
 .main-container {
     height: fit-content;
-    width:80%;
+    width:85%;
     /* background-color: rgb(228 184 188); */
     /* background-color: rgba(244,146,152, 0.5 ); */
     /* background-color: rgba(244,146,152, 0 ); */
@@ -36,7 +36,7 @@
 }
 
 .info-container {
-    margin: 1rem 1rem 1rem 0;
+    margin: 2rem 2rem 1rem 0;
     height: 50vh;
     width: 28%;
     background: rgba(251, 255, 0, 0.467);
@@ -53,8 +53,32 @@
     border: 2px solid transparent;
     border-bottom: 2px solid #d7d7d7;
     border-radius: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
 }
 .volume-url:hover {
     /* background: #d5d5d5; */
-    border: 2px solid #d4d4d4;
+    /* border: 2px solid #d4d4d4; */
+    border: 2px solid rgb(48 93 103);
+}
+
+
+
+@media screen and (max-width:1440px) {
+    .main-container {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    .link-container {
+        margin: 1rem auto;
+        width: 81.5%;
+        min-width: 81.6%;
+    }
+
+    .info-container {
+        margin: 2rem auto;
+        min-width: 81.6%;
+    }
 }

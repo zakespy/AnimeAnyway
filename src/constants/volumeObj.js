@@ -1,0 +1,127 @@
+export const volumeData = [
+    {
+        "volumeNumber": 1,
+        "driveURL": "https://drive.google.com/file/d/14RJpw73geBKV0H95F7yRx5uzcQtmG8Ym/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 2,
+        "driveURL": "https://drive.google.com/file/d/1Ph3ymItScpZhMIJbR1PVAFvtQUb3qKKi/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 3,
+        "driveURL": "https://drive.google.com/file/d/1_e5uBZFBgZL1JzLtxXLvMB-3KTyrIXb9/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 4,
+        "driveURL": "https://drive.google.com/file/d/1nJdn97gIdTd6uyVXLT8_cbJsKf3ccIMT/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 4.5,
+        "driveURL": "https://drive.google.com/file/d/1Sjg43AeMNyqWtpEA3nInw4F5pFHgJrGT/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 5,
+        "driveURL": "https://drive.google.com/file/d/1O17CIlxuv57nh2IBaIyZzJu8lWMqPI4t/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 6,
+        "driveURL": "https://drive.google.com/file/d/1_0rGgUFEBSJZcHkWjPN9NH_ipUmY9E5t/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 7,
+        "driveURL": "https://drive.google.com/file/d/1S5oP8350dvs-rjUtbm1PnxIJPqSZpXo4/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 7.5,
+        "driveURL": "https://drive.google.com/file/d/1H1MEYI-Vuz0nWJTsT3_SHCqnYsHQN7L4/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 8,
+        "driveURL": "https://drive.google.com/file/d/1bEptuOkh4jgAyiu-bLIb_v0BhzdT_wtc/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 9,
+        "driveURL": "https://drive.google.com/file/d/1Z4q_TYtYbujSyNOXFW4GLASlyXEMJlR9/view",
+        "releaseDate": 9/10/2020
+    },
+    { 
+        "volumeNumber": 10,
+        "driveURL": "https://drive.google.com/file/d/1jEI3Fc7rRq3ase0NrGN9EN4L3SDdpHoz/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 11,
+        "driveURL": "https://drive.google.com/file/d/1qHfEe4vZ4AYA2cPPyemFf5h6BuQdn0gT/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 11.5,
+        "driveURL": "https://drive.google.com/file/d/1ZnShI_NFM91jpgY1eUfKZgFcY5MNAz5F/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 11.75,
+        "driveURL": "https://drive.google.com/file/d/1Uz7GqWDIgZSjIK0xTy4dRLUHZMTXkV3I/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 12,
+        "driveURL": "https://drive.google.com/file/d/1nx8ErbECnCeqfGIJDjdI08ZmROegDIR_/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 13,
+        "driveURL": "https://drive.google.com/file/d/1GYJkjgSyp6MqCh9Doz_Di5gz__08gKKL/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 14,
+        "driveURL": "https://drive.google.com/file/d/1rHYboWQqPYvM6ycOgUipJwJl-zTy6mw5/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 15,
+        "driveURL": "",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 16,
+        "driveURL": "https://drive.google.com/file/d/1F46hivtZOcpAmTdE4enDK2sxqPx-APi6/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 17,
+        "driveURL": "https://drive.google.com/file/d/1MVYdchrWG2bhKy-EjZgtI7mRPnAQEH4D/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 18,
+        "driveURL": "https://drive.google.com/file/d/1z9BZVKzTDH7qLDT3-veYmpQcnDUApuo_/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 19,
+        "driveURL": "https://drive.google.com/file/d/1DEqpE0YPxkjc149jfuQeS8AUI-knZu7r/view",
+        "releaseDate": 9/10/2020
+    },
+    {
+        "volumeNumber": 20,
+        "driveURL": "https://drive.google.com/file/d/1s72TDhpZ5ysHA9zz6yqMR2OPAG9dghDa/view",
+        "releaseDate": 9/10/2020
+    },
+    // {
+    //     "volumeNumber": 21,
+    //     "driveURL": "",
+    //     "releaseDate": 9/10/2020
+    // }
+]
