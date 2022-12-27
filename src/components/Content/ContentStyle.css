@@ -33,6 +33,15 @@
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    Color: black;
+}
+
+.volume-url{
+    color: black;
+}
+
+.volume-url:visited{
+    color:rgb(56, 55, 55);
 }
 
 .info-container {

@@ -17,7 +17,7 @@ export default function Content(){
         <>
             <div className="download-container">
                 Download { volNum } of COTE
-                <a href={url} target="_blank" >
+                <a href={url} target="_blank" rel="noreferrer" >
                     <button className="download-button">
                         Download
                         <DownloadIcon sx={{ color: "black", margin: "0 0 0 1rem" }} fontSize="large" />
