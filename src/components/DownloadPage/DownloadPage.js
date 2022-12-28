@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 
 import DownloadIcon from '@mui/icons-material/Download';
@@ -10,13 +10,13 @@ export default function Content() {
 
     const location = useLocation();
     const url = location.state?.url;
-    const { name } = useParams();
-    console.log(url)
+    const { volNum } = useParams();
+    // console.log(url)
 
     return (
         <>
             <div className="download-container">
-                Download {name} of COTE
+                Download {volNum} of COTE
                 <a href={url} target="_blank" rel="noreferrer" >
                     <button className="download-button">
                         Download
