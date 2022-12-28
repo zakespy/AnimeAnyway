@@ -1,127 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&family=Varela+Round&display=swap");
 
+@media screen and (min-width: 1150px) {
+  .ChannelFooter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 85%;
+    /* background-color: aqua; */
+    margin: auto;
+    bottom: 10px;
+  }
 
+  .footerInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 52%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgb(244, 146, 152)
+    );
+    background-color: rgb(244, 146, 152);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 
-@media screen and (min-width:1150px) {
-    .ChannelFooter {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 500px;
-            width: 85%;
-            /* background-color: aqua; */
-            margin: auto;
-            bottom: 10px;
-    
-        }
-    
-        .footerInfo {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            height: 62%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.20), rgb(244, 146, 152));
-            background-color: rgb(244, 146, 152);
-        }
-    
-        .channel-info {
-            /* padding-top: 10px; */
-            width: 40%;
-            margin-left: 100px;
-            text-align: left;
-            font-family: 'Varela Round', sans-serif;
-            color: rgba(255, 255, 255, 0.885);
-    
-            /* filter: blur(10px); */
-        }
-    
-    
-    
-        .creator-info {
-            width: 40%;
-            text-align: center;
-            margin-left: 100px;
-            font-family: 'Dancing Script', cursive;
-            font-size: 30px;
-            color: #FFFFFF;
-        }
-    
-        .lastImage {
-            height: 38%;
-            background-image: url("./channels4_banner(1).jpg");
-            background-color: rgba(255, 255, 255, 0.1);
-            background-blend-mode: lighten;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    
-        .custom-shape-divider-top-1671373515 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-    
-        .custom-shape-divider-top-1671373515 .shape-fill {
-            fill: #FFFFFF;
-        }
+  .channel-info {
+    /* padding-top: 10px; */
+    width: 40%;
+    margin-left: 100px;
+    text-align: left;
+    font-family: "Varela Round", sans-serif;
+    color: rgba(255, 255, 255, 0.885);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    /* filter: blur(10px); */
+  }
+
+  .creator-info {
+    width: 40%;
+    text-align: center;
+    margin-left: 100px;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  .lastImage {
+    height: 38%;
+    background-image: url("./channels4_banner(1).jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .custom-shape-divider-top-1671373515 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1671373515 .shape-fill {
+    fill: #ffffff;
+  }
 }
 
-@media screen and (max-width:1200px) and (min-width:910px){
-    .ChannelFooter {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 500px;
-            width: 100%;
-            /* background-color: aqua; */
-            margin: auto;
-            bottom: 0px;
-        }
-    
-        .footerInfo {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            height: 62%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.20), rgb(244, 146, 152));
-            background-color: rgb(244, 146, 152);
-        }
-    
-        .channel-info {
-            /* padding-top: 10px; */
-            width: 40%;
-            margin-left: 100px;
-            text-align: left;
-            font-family: 'Varela Round', sans-serif;
-            color: rgba(255, 255, 255, 0.885);
-    
-            /* filter: blur(10px); */
-        }
-    
-    
-    
-        .creator-info {
-            width: 40%;
-            text-align: center;
-            margin-left: 100px;
-            font-family: 'Dancing Script', cursive;
-            font-size: 30px;
-            color: #FFFFFF;
-        }
-    
-        .lastImage {
-            height: 38%;
-            background-image: url("./channels4_banner(1).jpg");
-            background-color: rgba(255, 255, 255, 0.1);
-            background-blend-mode: lighten;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    
-        /* .custom-shape-divider-top-1671373515 {
+@media screen and (max-width: 1200px) and (min-width: 910px) {
+  .ChannelFooter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+    bottom: 0px;
+  }
+
+  .footerInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 62%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgb(244, 146, 152)
+    );
+    background-color: rgb(244, 146, 152);
+  }
+
+  .channel-info {
+    /* padding-top: 10px; */
+    width: 40%;
+    margin-left: 100px;
+    text-align: left;
+    font-family: "Varela Round", sans-serif;
+    color: rgba(255, 255, 255, 0.885);
+
+    /* filter: blur(10px); */
+  }
+
+  .creator-info {
+    width: 40%;
+    text-align: center;
+    margin-left: 100px;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  .lastImage {
+    height: 38%;
+    background-image: url("./channels4_banner(1).jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* .custom-shape-divider-top-1671373515 {
             position: absolute;
             top: 0;
             left: 0;
@@ -135,62 +142,64 @@
         } */
 }
 
-@media screen and  (max-width:910px){
-    .ChannelFooter {
-            /* position: relative; */
-            display: flex;
-            flex-direction: column;
-            height: auto;
-            width: 100%;
-            /* background-color: aqua; */
-            margin: auto;
-            bottom: 0px;
-        }
-    
-        .footerInfo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 62%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.20), rgb(244, 146, 152));
-            background-color: rgb(244, 146, 152);
-        }
-    
-        .channel-info {
-            /* padding-top: 10px; */
-            /* width: 40%; */
-            /* margin-left: 100px; */
+@media screen and (max-width: 910px) {
+  .ChannelFooter {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    /* background-color: aqua; */
+    margin: auto;
+    bottom: 0px;
+  }
 
-            text-align: center;
-            margin: 10px;
-            font-family: 'Varela Round', sans-serif;
-            color: rgba(255, 255, 255, 0.885);
-    
-            /* filter: blur(10px); */
-        }
-    
-    
-    
-        .creator-info {
-            width: 40%;
-            text-align: center;
-            /* margin-left: 100px; */
-            font-family: 'Dancing Script', cursive;
-            font-size: 30px;
-            color: #FFFFFF;
-        }
-    
-        .lastImage {
-            height: 200px;
-            background-image: url("./channels4_banner(1).jpg");
-            background-color: rgba(255, 255, 255, 0.1);
-            /* background-blend-mode: lighten; */
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top;
-        }
-    
-        /* .custom-shape-divider-top-1671373515 {
+  .footerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 62%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgb(244, 146, 152)
+    );
+    background-color: rgb(244, 146, 152);
+  }
+
+  .channel-info {
+    /* padding-top: 10px; */
+    /* width: 40%; */
+    /* margin-left: 100px; */
+
+    text-align: center;
+    margin: 10px;
+    font-family: "Varela Round", sans-serif;
+    color: rgba(255, 255, 255, 0.885);
+
+    /* filter: blur(10px); */
+  }
+
+  .creator-info {
+    width: 40%;
+    text-align: center;
+    /* margin-left: 100px; */
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    color: #ffffff;
+  }
+
+  .lastImage {
+    height: 200px;
+    background-image: url("./channels4_banner(1).jpg");
+    background-color: rgba(255, 255, 255, 0.1);
+    /* background-blend-mode: lighten; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  /* .custom-shape-divider-top-1671373515 {
             position: absolute;
             top: 0;
             left: 0;
