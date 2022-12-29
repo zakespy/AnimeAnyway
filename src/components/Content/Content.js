@@ -30,7 +30,7 @@ export default function Content() {
                 </div>
 
                 <div className="info-container">
-                    <strong>
+                    <strong> 
                         Volume 0 will be translated by January 5th. <br /> <br />
                         Year 2 Volume 9 is estimated to release on february 25th, and trial version will be released early in february.
                         Consider subscribing to the channel for more updates!
