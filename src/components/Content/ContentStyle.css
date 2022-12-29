@@ -40,7 +40,7 @@
 }
 
 .volume-url:visited {
-  color: rgb(56, 55, 55);
+  color: rgb(82, 78, 78);
 }
 
 .info-container {
@@ -53,6 +53,7 @@
   border-radius: 1rem;
   padding: 20px;
   font-size: 20px;
+  color:rgb(48, 47, 47)
 }
 
 .volume-url {
