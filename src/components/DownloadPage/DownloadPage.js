@@ -1,23 +1,21 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
-
 import DownloadIcon from '@mui/icons-material/Download';
-import { Button } from "@mui/material";
+import React from "react";
+import { useLocation } from "react-router-dom";
+import { volumeData } from '../../constants/volumeObj.js';
 
 import './DownloadPage.css';
 
 export default function Content() {
 
-    const location = useLocation();
-    const url = location.state?.url;
-    const { volNum } = useParams();
-    // console.log(url)
+    const search = useLocation().search;
+    var volume_index = 0;
+    volume_index = new URLSearchParams(search).get("volume");
 
     return (
         <>
             <div className="download-container">
-                Download {volNum} of COTE
-                <a href={url} target="_blank" rel="noreferrer" >
+                Download {volumeData[volume_index].name} of COTE
+                <a href={volumeData[volume_index].driveURL} target="_blank" rel="noreferrer" >
                     <button className="download-button">
                         Download
                         <DownloadIcon sx={{ color: "black", margin: "0 0 0 1rem" }} fontSize="large" />
