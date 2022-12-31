@@ -20,7 +20,7 @@ export default function Content() {
                 <a href={url} target="_blank" rel="noreferrer" >
                     <button className="download-button">
                         Download
-                        <DownloadIcon sx={{ color: "black", margin: "0 0 0 1rem" }} fontSize="large" />
+                        <DownloadIcon sx={{ color: "white", margin: "0 0 0 1rem" }} fontSize="large" />
                     </button>
                 </a>
             </div>
