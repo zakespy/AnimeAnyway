@@ -6,6 +6,7 @@ import Header from './components/ChannelHeader/Header.js';
 import Content from './components/Content/Content.js';
 import DownloadPage from './components/DownloadPage/DownloadPage.js';
 import Footer from './components/Footer/Footer.js';
+import ReadingPage from './components/ReadingPage/ReadingPage';
 
 function App() {
   return (
@@ -13,11 +14,12 @@ function App() {
       <BrowserRouter>
         <Header />
 
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/download" element={<DownloadPage />} />
-        </Routes>
+        </Routes> */}
 
+        <ReadingPage/>
         <Footer />
       </BrowserRouter>
     </>

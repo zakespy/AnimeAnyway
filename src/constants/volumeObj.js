@@ -147,7 +147,7 @@ export const volumeData = [
         "volumeNumber": 21,
         "driveURL": "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
         "releaseDate": 9 / 10 / 2020,
-        "name": "Volume 0"
+        "name": "Volume 0",
     }
     // {
     //     "volumeNumber": 22,
