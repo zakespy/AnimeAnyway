@@ -14,12 +14,12 @@ function App() {
       <BrowserRouter>
         <Header />
 
-        {/* <Routes>
+        <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/download" element={<DownloadPage />} />
-        </Routes> */}
+        </Routes>
 
-        <ReadingPage/>
+        {/* <ReadingPage/> */}
         <Footer />
       </BrowserRouter>
     </>
