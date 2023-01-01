@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.4435ddd3.css",
-    "main.js": "/static/js/main.a4df7cfd.js",
+    "main.css": "/static/css/main.e0cc0688.css",
+    "main.js": "/static/js/main.e53e9e52.js",
     "static/js/787.755cd986.chunk.js": "/static/js/787.755cd986.chunk.js",
+    "pdf.worker.js": "/d20c1db108d529ba15c138b06edd4b86.js",
+    "static/media/Chapter 1 - Classroom of the Elite Volume O.pdf": "/static/media/Chapter 1 - Classroom of the Elite Volume O.ee8796ea7cac4e7ad7f7.pdf",
     "static/media/cl2-header.png": "/static/media/cl2-header.3be763e2c507c605d106.png",
     "static/media/channels4_banner(1).jpg": "/static/media/channels4_banner(1).97c6659a67b416a5d8f8.jpg",
+    "static/media/sample.pdf": "/static/media/sample.ac0398d4ca249e568588.pdf",
     "index.html": "/index.html",
-    "main.4435ddd3.css.map": "/static/css/main.4435ddd3.css.map",
-    "main.a4df7cfd.js.map": "/static/js/main.a4df7cfd.js.map",
+    "main.e0cc0688.css.map": "/static/css/main.e0cc0688.css.map",
+    "main.e53e9e52.js.map": "/static/js/main.e53e9e52.js.map",
     "787.755cd986.chunk.js.map": "/static/js/787.755cd986.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4435ddd3.css",
-    "static/js/main.a4df7cfd.js"
+    "static/css/main.e0cc0688.css",
+    "static/js/main.e53e9e52.js"
   ]
 }
