@@ -7,7 +7,7 @@ import Content from './components/Content/Content.js';
 import DownloadPage from './components/DownloadPage/DownloadPage.js';
 import Footer from './components/Footer/Footer.js';
 import ReadingPage from './components/ReadingPage/ReadingPage';
-
+import VolumeCard from './components/VolumeCard/VolumeCard';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path="/download" element={<DownloadPage />} />
         </Routes>
        
-
+        {/* <VolumeCard/> */}
         {/* <ReadingPage/> */}
         <Footer />
       </BrowserRouter>

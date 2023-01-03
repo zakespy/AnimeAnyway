@@ -19,8 +19,20 @@
   box-shadow: 1px 1px 7px grey;
 }
 
+.volume-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .accord-container{
-  width:100%;
+  width:95%;
   height: auto;
   padding: 10px;
 }
@@ -115,7 +127,7 @@
   }
 
   .accord-container{
-  width:98%;
+  width:90%;
   height: auto;
   padding: 10px;
 }
