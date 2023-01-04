@@ -15,7 +15,8 @@
 {
   margin:0px;
   font-size:1.2em;
-  font-weight:500;
+  font-weight: 500;
+  color: rgb(24, 23, 23);
 }
 
 .property-description p
@@ -25,12 +26,14 @@
 
 .center
 {
-  height:35vh;
+  height:34vh;
   /* width:23%; */
   margin: 30px 30px;
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  border-radius: 22px;
+  box-shadow: rgb(46, 45, 45) 1px 2px 10px;
 }
 
 /* End Non-Essential  */
@@ -52,8 +55,8 @@
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
   border-radius:16px;
   overflow:hidden;
-  -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
-  box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+  /* -webkit-box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
+  /* box-shadow:  15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
 }
 /* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
 
@@ -69,9 +72,9 @@
   /* -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
-  background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg');
-  background-size:cover;
-  background-repeat:no-repeat;
+  /* background-image:url('https://cdn.photographylife.com/wp-content/uploads/2017/01/What-is-landscape-photography.jpg'); */
+  /* background-size:cover;
+  background-repeat:no-repeat; */
 }
 
 /* Bottom Card Section */
@@ -88,18 +91,21 @@
   /* transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
   padding: 0.5em 1em;
   text-align:center;
+  background: linear-gradient(to right ,rgb(243, 138, 130) 0%,rgb(243, 169, 169) 50%,rgb(250, 197, 161) 100%);
 }
 
 /* Social Icons */
 
 .property-social-icons
 {
-  /* width:1em;
-  height:1em; */
+  /* width:1em; */
+  /* height:20px; */
   /* background-color:black; */
+  display: flex;
+  flex-direction: row;
   position:absolute;
-  bottom:1em;
-  left:1em;
+  bottom:0.2em;
+  left:0.8em;
   -webkit-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   -o-transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition:all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -109,9 +115,16 @@
     border-radius: 10px;
     height: 20px;
     width:60px;
-    background-color: aqua;
+    background-color: white;
     text-align: center;
     padding-bottom: 3px;
+    margin-right: 5px;
+    color:rgb(32, 32, 32);
+    font-weight: 600;
+}
+
+.downloadbutton{
+  color: rgb(44, 44, 44);
 }
 
 /* Property Cards Hover States */

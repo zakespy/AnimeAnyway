@@ -168,13 +168,15 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1DEqpE0YPxkjc149jfuQeS8AUI-knZu7r/view",
     releaseDate: 9 / 10 / 2020,
-    name: "Year Two Volume 7",
+    image: "../../assets/images/back1.jpg",
+    name: "Year Two Volume 7"
   },
   {
     volumeNumber: 20,
     driveURL:
       "https://drive.google.com/file/d/1s72TDhpZ5ysHA9zz6yqMR2OPAG9dghDa/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Year Two Volume 8",
   },
   {
@@ -182,6 +184,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Volume 0",
   },
   {
@@ -189,6 +192,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Volume 0",
   },
   {
@@ -196,6 +200,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Volume 0",
   },
   {
@@ -203,6 +208,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Volume 0",
   },
   {
@@ -210,6 +216,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Volume 0",
   },
   {
@@ -217,6 +224,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
     releaseDate: 9 / 10 / 2020,
+    image: "../../assets/images/back1.jpg",
     name: "Volume 0",
   },
 ];

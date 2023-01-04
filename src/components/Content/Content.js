@@ -31,7 +31,7 @@ export default function Content() {
             <div className="card-container">
               {transVolumes.map(e=>{
                 return <>
-                  <VolumeCard card={{e}}/>
+                  <VolumeCard card={{e}} index={translatedVolume.indexOf(e)}/>
                 </>
               })}
             </div>
