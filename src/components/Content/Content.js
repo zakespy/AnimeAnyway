@@ -31,7 +31,7 @@ export default function Content() {
             <div className="card-container">
               {transVolumes.map(e=>{
                 return <>
-                  <VolumeCard card={{e}} index={translatedVolume.indexOf(e)}/>
+                  <VolumeCard card={{e}} key={e.volumeNumber} index={translatedVolume.indexOf(e)}/>
                 </>
               })}
             </div>
@@ -65,7 +65,7 @@ export default function Content() {
                       // </Link>
                       return (
                         <>
-                        {console.log(vol)}
+                        {/* {console.log(vol)} */}
                           <a
                             href={vol.ytlink}
                             className="volume-url"
