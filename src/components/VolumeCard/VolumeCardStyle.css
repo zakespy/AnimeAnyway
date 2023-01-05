@@ -28,7 +28,9 @@
 {
   height:34vh;
   /* width:23%; */
+  /* margin: 30px 30px; */
   margin: 30px 30px;
+  /* margin-right: 20px; */
   display: flex;
   /* justify-content: center; */
   align-items: center;

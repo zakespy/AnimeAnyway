@@ -29,13 +29,28 @@ export default function Content() {
         <div className="main-container">
           <div className="volume-container">
             <div className="card-container">
-              {transVolumes.map(e=>{
-                return <>
-                  <VolumeCard card={{e}} key={e.volumeNumber} index={translatedVolume.indexOf(e)}/>
-                </>
+              {transVolumes.map((e) => {
+                return (
+                  <>
+                    <VolumeCard
+                      card={{ e }}
+                      key={e.volumeNumber}
+                      index={translatedVolume.indexOf(e)}
+                    />
+                  </>
+                );
               })}
             </div>
-            <div className="accord-container">
+            <div className="info-container">
+              <strong>
+                Volume 0 will be translated by January 5th. <br /> <br />
+                Year 2 Volume 9 is estimated to release on february 25th, and
+                trial version will be released early in february. Consider
+                subscribing to the channel for more updates!
+              </strong>
+            </div>
+          </div>
+          <div className="accord-container">
               <Accordion className="accordion">
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
@@ -47,25 +62,8 @@ export default function Content() {
                 <AccordionDetails>
                   <div className="link-container">
                     {volumes.map((vol) => {
-                      // <Link
-                      //   // to={`/download?volume=${volumeData.indexOf(vol)}`}
-                      //   className="volume-url"
-                      //   style={{
-                      //     background: `${
-                      //       volumeData.indexOf(vol) % 2
-                      //         ? "rgba(245, 245, 245, 0.8)"
-                      //         : "rgba(255, 255, 255, 0.8)"
-                      //     }`,
-                      //   }}
-                      //   key={vol.volumeNumber}
-                      // >
-                      //   {vol.name}
-                      //   {/* <hr></hr> */}
-                        
-                      // </Link>
                       return (
                         <>
-                        {/* {console.log(vol)} */}
                           <a
                             href={vol.ytlink}
                             className="volume-url"
@@ -83,23 +81,11 @@ export default function Content() {
                           </a>
                         </>
                       );
-                      // eslint-disable-next-line react/jsx-no-target-blank
-                      
                       })}
                   </div>
                 </AccordionDetails>
               </Accordion>
             </div>
-          </div>
-
-          <div className="info-container">
-            <strong>
-              Volume 0 will be translated by January 5th. <br /> <br />
-              Year 2 Volume 9 is estimated to release on february 25th, and
-              trial version will be released early in february. Consider
-              subscribing to the channel for more updates!
-            </strong>
-          </div>
         </div>
         <div></div>
       </>
