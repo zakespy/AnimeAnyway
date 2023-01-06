@@ -18,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/download" element={<DownloadPage />} />
+          <Route path="/read" element={<ReadingPage />} />
         </Routes>
        
         {/* <VolumeCard/> */}

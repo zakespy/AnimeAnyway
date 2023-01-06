@@ -47,7 +47,14 @@ export default function VolumeCard({card, index}) {
           </div>
           <div className="property-social-icons">
             <a href="#">
-              <div className="read-button">Read</div>
+              <div className="read-button">
+                <Link
+                  to={`/read?volume=${index}`}
+                  className="downloadbutton"
+                >
+                  Read
+                </Link>
+              </div>
             </a>
             <Link to={`/download?volume=${index}`} className="downloadbutton">
               <FileDownloadIcon className="downloadbutton" />

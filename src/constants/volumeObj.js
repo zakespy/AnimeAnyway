@@ -164,7 +164,7 @@ export const volumeData = [
 
 export const translatedVolume = [
   {
-    volumeNumber: 190,
+    volumeNumber: 19,
     driveURL:
       "https://drive.google.com/file/d/1DEqpE0YPxkjc1490jfuQeS8AUI-knZu7r/view",
     releaseDate: 90 / 10 / 2020,
