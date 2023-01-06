@@ -1,5 +1,8 @@
 import React from "react";
 import './FooterStyle.css';
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 export default function Footer() {
   return (
@@ -11,12 +14,39 @@ export default function Footer() {
             <h3>Channel for all Classroom of elite novel and translation</h3>
             {/* <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi voluptatum nulla eligendi doloribus recusandae voluptates minima incidunt ducimus quo exercitationem, corrupti laboriosam illo libero, sequi, quae optio deleniti consequatur?</h3> */}
           </div>
-          {/* <div className="creator-info">
+          <div className="creator-info">
+            <div className="channel-link">
+              <h2>Follow Us</h2>
+              <a
+                href="https://www.instagram.com/anime_anyway_/?igshid=1ch5mp9tspotz"
+                target="_blank"
+              >
+                <div className="links">
+                  <h4>Instagram</h4>
+                  <InstagramIcon className="icons" />
+                </div>
+              </a>
+              <a
+                href="https://www.youtube.com/@ANIMEANYWAY/about"
+                target="_blank"
+              >
+                <div className="links">
+                  <h4>Youtube</h4>
+                  <YouTubeIcon className="icons" />
+                </div>
+              </a>
+              <a href="https://t.me/animeanyway" target="_blank">
+                <div className="links">
+                  <h4>Telegram</h4>
+                  <TelegramIcon className="icons" />
+                </div>
+              </a>
+            </div>
+            <div className="developer-link"></div>
             <h2>Company name</h2>
-          </div> */}
+          </div>
         </div>
-        <div className="lastImage">
-        </div>
+        <div className="lastImage"></div>
         {/* wavey part */}
         {/* <div class="custom-shape-divider-top-1671373515">
             <svg

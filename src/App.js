@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import BuyMeCoffee from './components/BuyMeCoffee/BuyMeCoffee';
 
 import Header from './components/ChannelHeader/Header.js';
 import Content from './components/Content/Content.js';
@@ -23,6 +24,7 @@ function App() {
        
         {/* <VolumeCard/> */}
         {/* <ReadingPage/> */}
+        <BuyMeCoffee/>
         <Footer />
       </BrowserRouter>
     </>

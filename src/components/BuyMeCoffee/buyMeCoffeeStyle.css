@@ -1,0 +1,17 @@
+.coffee{
+    height: 100px;
+    width:85%;
+    background-color: rgb(71, 44, 44);
+    margin: 20px auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+}
+
+.text{
+    padding-top: 30px;
+    color: azure;
+}
