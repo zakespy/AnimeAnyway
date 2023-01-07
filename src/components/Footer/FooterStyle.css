@@ -110,7 +110,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 910px) {
+@media screen and (max-width: 1200px) and (min-width: 1150px) {
   .ChannelFooter {
     position: relative;
     display: flex;
@@ -150,10 +150,15 @@
     width: 40%;
     text-align: center;
     margin-left: 100px;
-    font-family: "Dancing Script", cursive;
-    font-size: 30px;
+    /* font-family: "Dancing Script", cursive; */
+    font-family: "Varela Round", sans-serif;;  
+    font-size: 20px;
     color: #ffffff;
+    /* display: flex;
+    flex-direction: column; */
   }
+
+  
 
   .lastImage {
     height: 38%;
@@ -178,7 +183,7 @@
         } */
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1150px) {
   .ChannelFooter {
     /* position: relative; */
     display: flex;
@@ -220,10 +225,40 @@
     width: 40%;
     text-align: center;
     /* margin-left: 100px; */
-    font-family: "Dancing Script", cursive;
-    font-size: 30px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 20px;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
   }
+
+  .channel-link{
+    margin: 10px 30px;
+    width: 67%;
+    text-align: center;
+  }
+
+  .channel-link h4 {
+    margin: 9px 0px;
+    color:rgba(255, 255, 255, 0.885);
+  }
+  .channel-link h2{
+    margin: 5px 0px;
+    margin-bottom: 20px;
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .icons{
+    color: rgba(255, 255, 255, 0.885);
+    margin-top: 9px;
+    margin-left: 5px;
+  }
+
 
   .lastImage {
     height: 200px;

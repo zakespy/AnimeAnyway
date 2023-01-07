@@ -42,8 +42,46 @@ export default function Footer() {
                 </div>
               </a>
             </div>
-            <div className="developer-link"></div>
-            <h2>Company name</h2>
+            <div
+              className="developer-link"
+              style={{ display: "flex", flexDirection: "column" }}
+            >
+              <h3
+                style={{
+                  fontFamily: "Dancing Script, cursive",
+                  fontSize: "45px",
+                  marginTop: "0px",
+                }}
+              >
+                Asplay
+              </h3>
+              {/* <h2 style={{ fontSize: "20px", marginTop: "-20px" }}>
+                Developer Company
+              </h2> */}
+              <h4 style={{ fontSize: "20px", marginTop: "-35px" }}>
+                Support Us on
+              </h4>
+              <h4
+                style={{
+                  fontSize: "20px",
+                  marginTop: "-10px",
+                  marginLeft: "-35px",
+                  color: "rgba(255, 255, 255, 0.885)",
+                }}
+              >
+                services@asplay.tech
+              </h4>
+              <h4
+                style={{
+                  fontSize: "20px",
+                  marginTop: "-10px",
+                  marginLeft: "-35px",
+                  color: "rgba(255, 255, 255, 0.885)",
+                }}
+              >
+                support@asplay.tech
+              </h4>
+            </div>
           </div>
         </div>
         <div className="lastImage"></div>
