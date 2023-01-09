@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import '../VolumeCard/VolumeCardStyle.css'
-import '../../assets/images/back1.jpg'
+// import '../../assets/images/back1.jpg'
 
 
 export default function VolumeCard({card, index}) {
 
-  const imageURl = React.lazy(() => import("../../assets/images/back1.jpg"));
+  // const imageURl = React.lazy(() => import("../../assets/images/back1.jpg"));
   // console.log(imageURl)
 
-  const style = () => ({
-    backgroundImage: "url(../../assets/images/back1.jpg)",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-  });
+  // const style = () => ({
+  //   backgroundImage: "url(../../assets/images/back1.jpg)",
+  //   backgroundRepeat: "no-repeat",
+  //   backgroundSize: "cover",
+  // });
 
   return (
     <>

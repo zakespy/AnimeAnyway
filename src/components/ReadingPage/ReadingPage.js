@@ -1,4 +1,4 @@
-import React,{useState,useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "../ReadingPage/ReadingPageStyle.css";
 import { translatedVolume } from "../../constants/volumeObj.js";
@@ -13,17 +13,21 @@ import Iframe from "react-iframe";
 // } from "react-reader";
 
 
-export default function ReadingPage() {
+export default function ReadingPage(props) {
   const search = useLocation().search;
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
+
+  // const containerRef = useRef(null);
+
+  
   // const [numPages, setNumPages] = useState(null);
   // const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
   // const viewerRef = useRef(null);
     
   // const docs = [
   //   // { uri: "https://url-to-my-pdf.pdf" },
-  //   { uri: require("../../assets/file/Volume O.pdf") }, // Local File
+  //   { uri: require("../../../public/assets/file/Volume 0.pdf") }, // Local File
   // ];
 
   // function onDocumentLoadSuccess({numPages}){
@@ -31,7 +35,25 @@ export default function ReadingPage() {
   //   setPageNumber(1)
   // }
 
-  const path = require(`../../assets/file/${translatedVolume[volume_index].name}.pdf`);
+  // useEffect(()=>{
+  //   const container = containerRef.current;
+  //   let instance ,PSPDFKit;
+
+  //   // eslint-disable-next-line no-unused-expressions
+  //   (async function(){
+  //     PSPDFKit = await import('pspdfkit');
+  //     instance = await PSPDFKit.load({
+  //       container,
+  //       document:props.document,
+  //       baseUrl:`${window.location.protocol}//${window.location.host}/${process.env.PUBLIC_URL}`
+  //     });
+  //   })();
+
+  //   return () => PSPDFKit && PSPDFKit.unload(container)
+  // },[]);
+
+  const path = require(`/public/assets/file/${translatedVolume[volume_index].name}.pdf`);
+  // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
 
   return (
     <>
@@ -52,10 +74,9 @@ export default function ReadingPage() {
           <Page height="500" pageNumber={pageNumber}/> 
         </Document> */}
 
-
         {/***************************************  Working *************************************************/}
 
-        <Iframe
+        {/* <Iframe
           url={path}
           // width="640px"
           // height="320px"
@@ -64,14 +85,18 @@ export default function ReadingPage() {
           display="block"
           position="relative"
           
-        />
-        
+        /> */}
+
+        {/* <div ref={containerRef} style={{width:"100%",height:"100vh"}}>
+        </div> */}
+
         {console.log(path)}
-        {/* <object
+        <object
           data={path}
           width="800"
           height="500"
-        ></object> */}
+          className="pdf-display"
+        ></object>
 
         {/* <embed src={path}
                width="100%"

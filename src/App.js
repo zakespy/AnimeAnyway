@@ -9,6 +9,7 @@ import DownloadPage from './components/DownloadPage/DownloadPage.js';
 import Footer from './components/Footer/Footer.js';
 import ReadingPage from './components/ReadingPage/ReadingPage';
 import VolumeCard from './components/VolumeCard/VolumeCard';
+// import PdfViewerComponent from './components/PdfViewerComponent';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/read" element={<ReadingPage />} />
         </Routes>
+
+        {/* <ReadingPage document={"Volume 0.pdf"}/> */}
        
         {/* <VolumeCard/> */}
         {/* <ReadingPage/> */}
