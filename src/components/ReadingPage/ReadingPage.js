@@ -71,12 +71,12 @@ export default function ReadingPage(props) {
 
   useEffect(()=>{
     setChapters(translatedVolume[volume_index].chapter);
-    // console.log(translatedVolume[volume_index].chapter[0]);
+    console.log(translatedVolume[volume_index].chapter[0]);
     setChapterName(translatedVolume[volume_index].chapter[0].name);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
   },[])
 
-  const path = require(`/public/assets/file/${translatedVolume[volume_index].name}.pdf`);
+  const path = `../../assets/file/${translatedVolume[volume_index].name}.pdf`;
   // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
 
   function changeChapter(){
@@ -134,8 +134,8 @@ export default function ReadingPage(props) {
           </Accordion>
         </div>
 
-        <div className="pdf-viewer" style={{ height: "90%", width: "70%" }}>
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.1.81/build/pdf.worker.min.js">
+        <div className="pdf-viewer" style={{ height: "90%", width: "100%" }}>
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
             <Viewer
               fileUrl={path}
               style={{ height: "100px" }}
