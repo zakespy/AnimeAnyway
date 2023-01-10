@@ -80,7 +80,7 @@ export default function ReadingPage(props) {
   // const path = '../../assets/file/Year Two Volume 8.pdf';
   const path = location.state?.path;
   // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
-
+ 
   function changeChapter(){
 
   }
