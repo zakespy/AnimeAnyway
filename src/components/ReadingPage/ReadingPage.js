@@ -27,6 +27,7 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 
 
 export default function ReadingPage(props) {
+  const location = useLocation();
   const search = useLocation().search;
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
@@ -76,7 +77,8 @@ export default function ReadingPage(props) {
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
   },[])
 
-  const path = '../../assets/file/Year Two Volume 8.pdf';
+  // const path = '../../assets/file/Year Two Volume 8.pdf';
+  const path = location.state?.path;
   // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
 
   function changeChapter(){

@@ -50,13 +50,14 @@ export default function VolumeCard({card, index}) {
               <div className="read-button">
                 <Link
                   to={`/read?volume=${index}`}
+                  state={{ path: card.e.path }}
                   className="downloadbutton"
                 >
                   Read
                 </Link>
               </div>
             </a>
-            <Link to={`/download?volume=${index}`} className="downloadbutton">
+            <Link to={`/download?volume=${index}`} className="downloadbutton" >
               <FileDownloadIcon className="downloadbutton" />
             </Link>
           </div>
