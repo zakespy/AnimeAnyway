@@ -169,7 +169,7 @@ export const translatedVolume = [
       "https://drive.google.com/file/d/1DEqpE0YPxkjc1490jfuQeS8AUI-knZu7r/view",
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/back1.jpg"),
-    name: "Year Two Volume 7"
+    name: "Year Two Volume 7",
   },
   {
     volumeNumber: 20,
@@ -178,6 +178,44 @@ export const translatedVolume = [
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/back1.jpg"),
     name: "Year Two Volume 8",
+    chapter: [
+      {
+        name:"Year two Volume 8",
+        pageNo:0
+      },
+      {
+        name: "Prologue",
+        pageNo:6,
+      },
+      {
+        name: "Chapter 1",
+        pageNo:9,
+      },
+      {
+        name: "Chapter 2",
+        pageNo:56,
+      },
+      {
+        name: "Chapter 3",
+        pageNo:116,
+      },
+      {
+        name: "Chapter 4",
+        pageNo:170,
+      },
+      {
+        name: "Chapter 5",
+        pageNo:213,
+      },
+      {
+        name: "Epilogue",
+        pageNo:246,
+      },
+      {
+        name: "Afterword",
+        pageNo:258,
+      },
+    ],
   },
   {
     volumeNumber: 21,

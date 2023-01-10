@@ -1,14 +1,20 @@
 
 .reading-container{
     /* height:500px; */
-    height:800px;
+    height:900px;
+    /* height: auto; */
     width:85%;
-    background-color: rgba(246, 248, 248, 0.363);
+    /* background-color: rgba(246, 248, 248, 0.363); */
+    background-color: aqua;
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
     min-height: 300px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .pdf-display{
@@ -16,4 +22,8 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+.chapter-option{
+    
 }

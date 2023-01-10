@@ -2,7 +2,20 @@ import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "../ReadingPage/ReadingPageStyle.css";
 import { translatedVolume } from "../../constants/volumeObj.js";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Iframe from "react-iframe";
+
+import { Viewer } from "@react-pdf-viewer/core";
+import { Worker } from "@react-pdf-viewer/core";
+import "@react-pdf-viewer/core/lib/styles/index.css";
+
+
+// import FileViewer from "react-file-viewer";
+
 // import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 // import { EpubViewer, ReactEpubViewer } from "react-epub-viewer";
 // import {
@@ -52,8 +65,23 @@ export default function ReadingPage(props) {
   //   return () => PSPDFKit && PSPDFKit.unload(container)
   // },[]);
 
+  const [pageNumber,setPageNumber] = useState(0);
+  const [chapters,setChapters] = useState([])
+  const [chapterName,setChapterName] = useState("")
+
+  useEffect(()=>{
+    setChapters(translatedVolume[volume_index].chapter);
+    // console.log(translatedVolume[volume_index].chapter[0]);
+    setChapterName(translatedVolume[volume_index].chapter[0].name);
+    setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
+  },[])
+
   const path = require(`/public/assets/file/${translatedVolume[volume_index].name}.pdf`);
   // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
+
+  function changeChapter(){
+
+  }
 
   return (
     <>
@@ -62,20 +90,64 @@ export default function ReadingPage(props) {
           url={path}
           ref={viewerRef} 
         /> */}
-
         {/* <ReactReader
           url={path}
           title={"Alice in wonderland"}
           location={"epubcfi(/6/2[cover]!/6)"}
           locationChanged={(epubcifi) => console.log(epubcifi)}
         /> */}
-
         {/* <Document file={path} onLoadSuccess={onDocumentLoadSuccess}>
           <Page height="500" pageNumber={pageNumber}/> 
         </Document> */}
 
-        {/***************************************  Working *************************************************/}
+        {/* <FileViewer
+          fileType={"pdf"}
+          filePath={path}
+        /> */}
+        <div className="chapter-option">
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>{chapterName}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              {chapters.map((e) => {
+                return (
+                  <>
+                    <div
+                      className="chapter-container"
+                      onClick={() => {
+                        setChapterName(e.name);
+                        setPageNumber(e.pageNo);
+                        console.log(e.name + e.pageNo)
+                      }}
+                    >
+                      {e.name}
+                    </div>
+                  </>
+                );
+              })}
+            </AccordionDetails>
+          </Accordion>
+        </div>
 
+        <div className="pdf-viewer" style={{ height: "90%", width: "70%" }}>
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.1.81/build/pdf.worker.min.js">
+            <Viewer
+              fileUrl={path}
+              style={{ height: "100px" }}
+              width="100%"
+              initialPage={pageNumber}
+              scrollMode=""
+              // renderPage={pageNumber}
+            />
+          </Worker>
+        </div>
+
+        {/***************************************  Working *************************************************/}
         {/* <Iframe
           url={path}
           // width="640px"
@@ -86,18 +158,15 @@ export default function ReadingPage(props) {
           position="relative"
           
         /> */}
-
         {/* <div ref={containerRef} style={{width:"100%",height:"100vh"}}>
         </div> */}
-
         {console.log(path)}
-        <object
+        {/* <object
           data={path}
           width="800"
           height="500"
           className="pdf-display"
-        ></object>
-
+        ></object> */}
         {/* <embed src={path}
                width="100%"
                height="1000"
