@@ -76,9 +76,12 @@ export default function ReadingPage(props) {
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
   },[])
 
-  const path = require(`/public/assets/file/${translatedVolume[volume_index].name}.pdf`);
+  // const path = require(`/public/assets/file/${translatedVolume[volume_index].name}.pdf`);
+  // const path = `../../assets/file/${translatedVolume[volume_index].name}.pdf`;
+  const path = '../../assets/file/Year Two Volume 8.pdf' 
+  // const path = "../../../public/assets/file/Year Two Volume 8.pdf"; 
   // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
-
+ 
   function changeChapter(){
 
   }
