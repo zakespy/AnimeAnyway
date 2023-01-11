@@ -26,7 +26,8 @@
 
 .center
 {
-  height:34vh;
+  /* height:34vh; */
+  height: fit-content;
   /* width:23%; */
   /* margin: 30px 30px; */
   margin: 30px 30px;
@@ -177,6 +178,7 @@ opacity:1;
 @media screen and (max-width:526px) {
     .center{
         margin: 30px auto;
+        height: fit-content;
     }
     
 }
