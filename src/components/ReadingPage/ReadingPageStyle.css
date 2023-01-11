@@ -5,7 +5,7 @@
     /* height: auto; */
     width:85%;
     /* background-color: rgba(246, 248, 248, 0.363); */
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0);
     margin: auto;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -29,7 +29,24 @@
     margin: 10px;
     position: absolute;
     top: 1.5%;
+    width: 30%;
+    cursor: pointer;
     z-index: 10;
+}
+
+.chapter-container{
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin: 2px;
+}
+
+.chapter-container:hover{
+    background-color: rgb(214, 218, 221);
+}
+
+.chapter-container:active{
+    background-color: rgb(173, 175, 177);
 }
 
 .pdf-viewer-container{
