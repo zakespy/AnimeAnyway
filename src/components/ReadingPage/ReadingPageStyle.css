@@ -25,5 +25,18 @@
 }
 
 .chapter-option{
-    
+    margin: 10px;
+    position: relative;
+    margin-top: 10px;
+    /* top:10px; */
+}
+
+.pdf-viewer-container{
+    height: 90%; 
+    width: 90%
+}
+
+.viewer{
+    height: 100px;
+    width: 50%;
 }

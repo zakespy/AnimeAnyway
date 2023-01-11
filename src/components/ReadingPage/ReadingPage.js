@@ -9,9 +9,11 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Iframe from "react-iframe";
 
-import { Viewer } from "@react-pdf-viewer/core";
+import { Viewer, SpecialZoomLevel,ViewMode } from "@react-pdf-viewer/core";
 import { Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
+import { pageNavigationPlugin } from "@react-pdf-viewer/page-navigation";
+import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 
 
 // import FileViewer from "react-file-viewer";
@@ -26,12 +28,15 @@ import "@react-pdf-viewer/core/lib/styles/index.css";
 // } from "react-reader";
 
 
+
 export default function ReadingPage(props) {
   const location = useLocation();
   const search = useLocation().search;
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
 
+  const pageNavigationPluginInstance = pageNavigationPlugin();
+  const { jumpToPage, CurrentPageInput } = pageNavigationPluginInstance;
   // const containerRef = useRef(null);
 
   
@@ -81,9 +86,7 @@ export default function ReadingPage(props) {
   const path = location.state?.path;
   // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
  
-  function changeChapter(){
-
-  }
+  
 
   return (
     <>
@@ -124,7 +127,8 @@ export default function ReadingPage(props) {
                       onClick={() => {
                         setChapterName(e.name);
                         setPageNumber(e.pageNo);
-                        console.log(e.name + e.pageNo)
+                        jumpToPage(pageNumber);
+                        console.log(e.name + e.pageNo);
                       }}
                     >
                       {e.name}
@@ -136,15 +140,17 @@ export default function ReadingPage(props) {
           </Accordion>
         </div>
 
-        <div className="pdf-viewer" style={{ height: "90%", width: "100%" }}>
+        <div className="pdf-viewer-container">
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
             <Viewer
               fileUrl={path}
-              style={{ height: "100px" }}
-              width="100%"
+              className="viewer"
+              // width="50%"
               initialPage={pageNumber}
               scrollMode=""
-              // renderPage={pageNumber}
+              defaultScale={SpecialZoomLevel.PageFit}
+              plugins={[pageNavigationPluginInstance]}
+              ViewMode={ViewMode.SinglePage}
             />
           </Worker>
         </div>
