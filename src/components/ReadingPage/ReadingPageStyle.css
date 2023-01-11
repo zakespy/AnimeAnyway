@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
 }
 
 .pdf-display{
@@ -26,14 +27,16 @@
 
 .chapter-option{
     margin: 10px;
-    position: relative;
-    margin-top: 10px;
-    /* top:10px; */
+    position: absolute;
+    top: 1.5%;
+    z-index: 10;
 }
 
 .pdf-viewer-container{
     height: 90%; 
-    width: 90%
+    width: 90%;
+    position: relative;
+    top: 6%
 }
 
 .viewer{
