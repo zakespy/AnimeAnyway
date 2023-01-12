@@ -73,12 +73,14 @@ export default function ReadingPage(props) {
 
   const [pageNumber,setPageNumber] = useState(0);
   const [chapters,setChapters] = useState([])
+  const [totalPage,setTotalPage] = useState()
   const [chapterName,setChapterName] = useState("")
 
   useEffect(()=>{
     setChapters(translatedVolume[volume_index].chapter);
     console.log(translatedVolume[volume_index].chapter[0]);
     setChapterName(translatedVolume[volume_index].chapter[0].name);
+    setTotalPage(translatedVolume[volume_index].totalPage);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
   },[])
 
@@ -109,35 +111,42 @@ export default function ReadingPage(props) {
           fileType={"pdf"}
           filePath={path}
         /> */}
-        <div className="chapter-option">
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Typography>{chapterName}</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              {chapters.map((e) => {
-                return (
-                  <>
-                    <div
-                      className="chapter-container"
-                      onClick={() => {
-                        setChapterName(e.name);
-                        setPageNumber(e.pageNo);
-                        jumpToPage(pageNumber);
-                        console.log(e.name + e.pageNo);
-                      }}
-                    >
-                      {e.name}
-                    </div>
-                  </>
-                );
-              })}
-            </AccordionDetails>
-          </Accordion>
+
+        <div className="label-tab">
+          <div className="pageInput">
+            <CurrentPageInput /> /{totalPage}
+          </div>
+
+          <div className="chapter-option">
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>{chapterName}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                {chapters.map((e) => {
+                  return (
+                    <>
+                      <div
+                        className="chapter-container"
+                        onClick={() => {
+                          setChapterName(e.name);
+                          setPageNumber(e.pageNo);
+                          jumpToPage(pageNumber);
+                          console.log(e.name + e.pageNo);
+                        }}
+                      >
+                        {e.name}
+                      </div>
+                    </>
+                  );
+                })}
+              </AccordionDetails>
+            </Accordion>
+          </div>
         </div>
 
         <div className="pdf-viewer-container">
@@ -168,7 +177,7 @@ export default function ReadingPage(props) {
         /> */}
         {/* <div ref={containerRef} style={{width:"100%",height:"100vh"}}>
         </div> */}
-        {console.log(path)}
+        {/* {console.log(path)} */}
         {/* <object
           data={path}
           width="800"
