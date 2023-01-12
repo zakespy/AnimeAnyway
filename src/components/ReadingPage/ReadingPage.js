@@ -14,19 +14,17 @@ import { Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { pageNavigationPlugin } from "@react-pdf-viewer/page-navigation";
 import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
-
-
-// import FileViewer from "react-file-viewer";
-
-// import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-// import { EpubViewer, ReactEpubViewer } from "react-epub-viewer";
-// import {
-//   EpubView, // Underlaying epub-canvas (wrapper for epub.js iframe)
-//   EpubViewStyle, // Styles for EpubView, you can pass it to the instance as a style prop for customize it
-//   ReactReader, // A simple epub-reader with left/right button and chapter navigation
-//   ReactReaderStyle, // Styles for the epub-reader it you need to customize it
-// } from "react-reader";
-
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import {
+  fullScreenPlugin,
+  RenderEnterFullScreenProps,
+  FullScreenIcon
+} from "@react-pdf-viewer/full-screen";
+import "@react-pdf-viewer/full-screen/lib/styles/index.css";
+import { themePlugin } from "@react-pdf-viewer/theme";
+import { DarkIcon, LightIcon } from "@react-pdf-viewer/theme";
+import { ThemeContext } from "@react-pdf-viewer/core";
 
 
 export default function ReadingPage(props) {
@@ -37,44 +35,34 @@ export default function ReadingPage(props) {
 
   const pageNavigationPluginInstance = pageNavigationPlugin();
   const { jumpToPage, CurrentPageInput } = pageNavigationPluginInstance;
-  // const containerRef = useRef(null);
 
-  
-  // const [numPages, setNumPages] = useState(null);
-  // const [pageNumber, setPageNumber] = useState(1); //setting 1 to show fisrt page
-  // const viewerRef = useRef(null);
-    
-  // const docs = [
-  //   // { uri: "https://url-to-my-pdf.pdf" },
-  //   { uri: require("../../../public/assets/file/Volume 0.pdf") }, // Local File
-  // ];
+  const fullScreenPluginInstance = fullScreenPlugin();
+  const { EnterFullScreen } = fullScreenPluginInstance;
 
-  // function onDocumentLoadSuccess({numPages}){
-  //   setNumPages(numPages);
-  //   setPageNumber(1)
-  // }
+  const themePluginInstance = themePlugin();
+  const {SwitchThemeButton} = themePluginInstance;
 
-  // useEffect(()=>{
-  //   const container = containerRef.current;
-  //   let instance ,PSPDFKit;
+  // const defaultLayoutPluginInstance = defaultLayoutPlugin({
+  //   toolbarPlugin: {
+  //     fullScreenPlugin: {
+  //       // Zoom to fit the screen after entering and exiting the full screen mode
+  //       onEnterFullScreen: (zoom) => {
+  //         zoom(SpecialZoomLevel.PageFit);
+  //       },
+  //       onExitFullScreen: (zoom) => {
+  //         zoom(SpecialZoomLevel.PageFit);
+  //       },
+  //     },
+  //   },
+  // });
 
-  //   // eslint-disable-next-line no-unused-expressions
-  //   (async function(){
-  //     PSPDFKit = await import('pspdfkit');
-  //     instance = await PSPDFKit.load({
-  //       container,
-  //       document:props.document,
-  //       baseUrl:`${window.location.protocol}//${window.location.host}/${process.env.PUBLIC_URL}`
-  //     });
-  //   })();
-
-  //   return () => PSPDFKit && PSPDFKit.unload(container)
-  // },[]);
 
   const [pageNumber,setPageNumber] = useState(0);
   const [chapters,setChapters] = useState([])
   const [totalPage,setTotalPage] = useState()
   const [chapterName,setChapterName] = useState("")
+  const [currentTheme, setCurrentTheme] = React.useState("light");
+  const themeContext = { currentTheme, setCurrentTheme };
 
   useEffect(()=>{
     setChapters(translatedVolume[volume_index].chapter);
@@ -84,35 +72,32 @@ export default function ReadingPage(props) {
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
   },[])
 
-  // const path = '../../assets/file/Year Two Volume 8.pdf';
   const path = location.state?.path;
-  // var html = require('../../assets/file/Chapter-1-Classroom-of-the-Elite-Volume-O.html') 
  
-  
-
   return (
     <>
       <div className="reading-container">
-        {/* <ReactEpubViewer
-          url={path}
-          ref={viewerRef} 
-        /> */}
-        {/* <ReactReader
-          url={path}
-          title={"Alice in wonderland"}
-          location={"epubcfi(/6/2[cover]!/6)"}
-          locationChanged={(epubcifi) => console.log(epubcifi)}
-        /> */}
-        {/* <Document file={path} onLoadSuccess={onDocumentLoadSuccess}>
-          <Page height="500" pageNumber={pageNumber}/> 
-        </Document> */}
-
-        {/* <FileViewer
-          fileType={"pdf"}
-          filePath={path}
-        /> */}
-
         <div className="label-tab">
+          <div className="theme-btn">
+            <ThemeContext.Provider value={themeContext}>
+              <SwitchThemeButton />
+            </ThemeContext.Provider>
+          </div>
+
+          <div className="fullscreeen-btn">
+            <EnterFullScreen>
+              {(props) => (
+                <button className="ful-btn"
+                  
+                  onClick={props.onClick}
+                >
+                  <FullScreenIcon/>
+                  {/* Enter fullscreen */}
+                </button>
+              )}
+            </EnterFullScreen>
+          </div>
+
           <div className="pageInput">
             <CurrentPageInput /> /{totalPage}
           </div>
@@ -158,7 +143,12 @@ export default function ReadingPage(props) {
               initialPage={pageNumber}
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
-              plugins={[pageNavigationPluginInstance]}
+              theme={currentTheme}
+              plugins={
+                ([pageNavigationPluginInstance],
+                [themePluginInstance],
+                [fullScreenPluginInstance])
+              }
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
