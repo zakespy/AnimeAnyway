@@ -15,8 +15,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Header />
-
+        <Header/>
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/download" element={<DownloadPage />} />
