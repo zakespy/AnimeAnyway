@@ -99,7 +99,7 @@ export default function ReadingPage(props) {
           </div>
 
           <div className="pageInput">
-            <CurrentPageInput /> /{totalPage}
+            <CurrentPageInput jumpToPage={pageNumber} /> /{totalPage}
           </div>
 
           <div className="chapter-option">
@@ -139,14 +139,15 @@ export default function ReadingPage(props) {
             <Viewer
               fileUrl={path}
               className="viewer"
-              // width="50%"
+              width="100%"
               initialPage={pageNumber}
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
               theme={currentTheme}
               plugins={
-                ([pageNavigationPluginInstance],
-                [themePluginInstance],
+                (
+                  [themePluginInstance],
+                  [pageNavigationPluginInstance],
                 [fullScreenPluginInstance])
               }
               ViewMode={ViewMode.SinglePage}
