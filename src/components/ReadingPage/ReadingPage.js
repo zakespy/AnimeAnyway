@@ -79,7 +79,7 @@ export default function ReadingPage(props) {
       <div className="reading-container">
         <div className="label-tab">
           <div className="theme-btn">
-            <ThemeContext.Provider value={themeContext}>
+            <ThemeContext.Provider value={themeContext} key={pageNumber}>
               <SwitchThemeButton />
             </ThemeContext.Provider>
           </div>
