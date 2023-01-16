@@ -88,16 +88,17 @@ export default function ReadingPage(props) {
   }
 
 
-  function PdfViewer() {
+  function PdfViewer({pageno}) {
     return (
       <>
+      {console.log(pageno)}
         <div className="pdf-viewer-container">
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
             <Viewer
               fileUrl={path}
               className="viewer"
               // width="50%"
-              initialPage={pageNumber}
+              initialPage={pageno}
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
               theme={currentTheme}
@@ -106,6 +107,7 @@ export default function ReadingPage(props) {
                 [fullScreenPluginInstance],
                 [pageNavigationPluginInstance])
               }
+              jumpToPage={pageno}
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
@@ -113,16 +115,17 @@ export default function ReadingPage(props) {
       </>
     );
   }
-  function FullscreenPdfViewer() {
+  function FullscreenPdfViewer(props) {
     return (
       <>
+      {console.log(props.pageno)}
         <div className="pdf-viewer-container">
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
             <Viewer
               fileUrl={path}
               className="viewer"
               // width="50%"
-              initialPage={pageNumber}
+              initialPage={props.pageno}
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
               theme={currentTheme}
@@ -131,6 +134,7 @@ export default function ReadingPage(props) {
                 [fullScreenPluginInstance]
                 )
               }
+              // jumpToPage={currentPageNo}
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
@@ -154,9 +158,11 @@ export default function ReadingPage(props) {
               {
                 (props) =>
                   // setPageNumber(props.currentPage)
-                  props.currentPage > pageNumber
-                    ? setPageNumber(pageNumber + props.currentPage - pageNumber)
-                    : setPageNumber(pageNumber + pageNumber - props.currentPage)
+                  // props.currentPage > pageNumber
+                  //   ? setPageNumber(pageNumber + props.currentPage - pageNumber)
+                  //   : setPageNumber(pageNumber + pageNumber - props.currentPage)
+                  // setCurrentPageNo(props.currentPage)
+                  setPageNumber(props.currentPage)
                 // console.log(props.currentPage + 1)
                 // <span>{`${props.currentPage + 1} of ${
                 //   props.numberOfPages
@@ -215,8 +221,8 @@ export default function ReadingPage(props) {
                       <div
                         className="chapter-container"
                         onClick={() => {
+                          setPageNumber(e.pageNo);
                           setChapterName(e.name);
-                          // setPageNumber(e.pageNo);
                           jumpToPage(e.pageNo);
                           // jumpToPage(pageNumber);
                           console.log(e.name + e.pageNo);
@@ -234,11 +240,11 @@ export default function ReadingPage(props) {
 
         {togglebutton ? (
           <>
-            <FullscreenPdfViewer />
+            <FullscreenPdfViewer pageno={pageNumber}/>
           </>
         ) : (
           <>
-            <PdfViewer />
+            <PdfViewer pageno={pageNumber} />
           </>
         )}
 
@@ -265,32 +271,6 @@ export default function ReadingPage(props) {
             />
           </Worker>
         </div> */}
-
-        {/***************************************  Working *************************************************/}
-        {/* <Iframe
-          url={path}
-          // width="640px"
-          // height="320px"
-          id=""
-          className="pdf-display"
-          display="block"
-          position="relative"
-          
-        /> */}
-        {/* <div ref={containerRef} style={{width:"100%",height:"100vh"}}>
-        </div> */}
-        {/* {console.log(path)} */}
-        {/* <object
-          data={path}
-          width="800"
-          height="500"
-          className="pdf-display"
-        ></object> */}
-        {/* <embed src={path}
-               width="100%"
-               height="1000"
-               ReadingPage="10"
-               ></embed> */}
       </div>
     </>
   );
