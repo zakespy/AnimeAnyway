@@ -88,60 +88,60 @@ export default function ReadingPage(props) {
   }
 
 
-  function PdfViewer({pageno}) {
-    return (
-      <>
-      {console.log(pageno)}
-        <div className="pdf-viewer-container">
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
-            <Viewer
-              fileUrl={path}
-              className="viewer"
-              // width="50%"
-              initialPage={pageno}
-              scrollMode=""
-              defaultScale={SpecialZoomLevel.PageFit}
-              theme={currentTheme}
-              plugins={
-                ([themePluginInstance],
-                [fullScreenPluginInstance],
-                [pageNavigationPluginInstance])
-              }
-              jumpToPage={pageno}
-              ViewMode={ViewMode.SinglePage}
-            />
-          </Worker>
-        </div>
-      </>
-    );
-  }
-  function FullscreenPdfViewer(props) {
-    return (
-      <>
-      {console.log(props.pageno)}
-        <div className="pdf-viewer-container">
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
-            <Viewer
-              fileUrl={path}
-              className="viewer"
-              // width="50%"
-              initialPage={props.pageno}
-              scrollMode=""
-              defaultScale={SpecialZoomLevel.PageFit}
-              theme={currentTheme}
-              plugins={
-                ([themePluginInstance],
-                [fullScreenPluginInstance]
-                )
-              }
-              // jumpToPage={currentPageNo}
-              ViewMode={ViewMode.SinglePage}
-            />
-          </Worker>
-        </div>
-      </>
-    );
-  }
+  // function PdfViewer({pageno}) {
+  //   return (
+  //     <>
+  //     {console.log(pageno)}
+  //       <div className="pdf-viewer-container">
+  //         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
+  //           <Viewer
+  //             fileUrl={path}
+  //             className="viewer"
+  //             // width="50%"
+  //             initialPage={pageno}
+  //             scrollMode=""
+  //             defaultScale={SpecialZoomLevel.PageFit}
+  //             theme={currentTheme}
+  //             plugins={
+  //               ([themePluginInstance],
+  //               // [fullScreenPluginInstance],
+  //               [pageNavigationPluginInstance,fullScreenPluginInstance])
+  //             }
+  //             jumpToPage={pageno}
+  //             ViewMode={ViewMode.SinglePage}
+  //           />
+  //         </Worker>
+  //       </div>
+  //     </>
+  //   );
+  // }
+  // function FullscreenPdfViewer(props) {
+  //   return (
+  //     <>
+  //     {console.log(props.pageno)}
+  //       <div className="pdf-viewer-container">
+  //         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
+  //           <Viewer
+  //             fileUrl={path}
+  //             className="viewer"
+  //             // width="50%"
+  //             initialPage={props.pageno}
+  //             scrollMode=""
+  //             defaultScale={SpecialZoomLevel.PageFit}
+  //             theme={currentTheme}
+  //             plugins={
+  //               ([themePluginInstance],
+  //               [fullScreenPluginInstance]
+  //               )
+  //             }
+  //             // jumpToPage={currentPageNo}
+  //             ViewMode={ViewMode.SinglePage}  
+  //           />
+  //         </Worker>
+  //       </div>
+  //     </>
+  //   );
+  // }
  
   return (
     <>
@@ -238,17 +238,20 @@ export default function ReadingPage(props) {
           </div>
         </div>
 
-        {togglebutton ? (
+        {/* <PdfViewer pageno={pageNumber} /> */}
+
+        {/* {togglebutton ? (
           <>
             <FullscreenPdfViewer pageno={pageNumber}/>
+            <PdfViewer pageno={pageNumber} />
           </>
         ) : (
           <>
             <PdfViewer pageno={pageNumber} />
           </>
-        )}
+        )} */}
 
-        {/* <div className="pdf-viewer-container">
+        <div className="pdf-viewer-container">
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
             <Viewer
               fileUrl={path}
@@ -262,15 +265,15 @@ export default function ReadingPage(props) {
               plugins={
                 (
                   [themePluginInstance],
-                  [fullScreenPluginInstance]
-                  [pageNavigationPluginInstance]
+                  [fullScreenPluginInstance,pageNavigationPluginInstance]
+                  // [pageNavigationPluginInstance]
                 )
               }
 
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
-        </div> */}
+        </div>
       </div>
     </>
   );
