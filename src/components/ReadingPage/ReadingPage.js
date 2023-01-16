@@ -12,7 +12,10 @@ import Iframe from "react-iframe";
 import { Viewer, SpecialZoomLevel,ViewMode } from "@react-pdf-viewer/core";
 import { Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import { pageNavigationPlugin } from "@react-pdf-viewer/page-navigation";
+import {
+  pageNavigationPlugin,
+  RenderCurrentPageLabelProps,
+} from "@react-pdf-viewer/page-navigation";
 import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
@@ -27,6 +30,9 @@ import { DarkIcon, LightIcon } from "@react-pdf-viewer/theme";
 import { ThemeContext } from "@react-pdf-viewer/core";
 
 
+
+
+
 export default function ReadingPage(props) {
   const location = useLocation();
   const search = useLocation().search;
@@ -34,7 +40,8 @@ export default function ReadingPage(props) {
   volume_index = new URLSearchParams(search).get("volume");
 
   const pageNavigationPluginInstance = pageNavigationPlugin();
-  const { jumpToPage, CurrentPageInput } = pageNavigationPluginInstance;
+  const { jumpToPage, CurrentPageInput, CurrentPageLabel } =
+    pageNavigationPluginInstance;
 
   const fullScreenPluginInstance = fullScreenPlugin();
   const { EnterFullScreen } = fullScreenPluginInstance;
@@ -58,10 +65,12 @@ export default function ReadingPage(props) {
 
 
   const [pageNumber,setPageNumber] = useState(0);
+  const [currentPageNo,setCurrentPageNo] = useState(pageNumber);
   const [chapters,setChapters] = useState([])
   const [totalPage,setTotalPage] = useState()
   const [chapterName,setChapterName] = useState("")
   const [currentTheme, setCurrentTheme] = React.useState("light");
+  const [togglebutton, setToggleButton] = React.useState(true);
   const themeContext = { currentTheme, setCurrentTheme };
 
   useEffect(()=>{
@@ -73,6 +82,62 @@ export default function ReadingPage(props) {
   },[])
 
   const path = location.state?.path;
+
+  const switchButton =(bool)=>{
+    setToggleButton(bool);
+  }
+
+
+  function PdfViewer() {
+    return (
+      <>
+        <div className="pdf-viewer-container">
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
+            <Viewer
+              fileUrl={path}
+              className="viewer"
+              // width="50%"
+              initialPage={pageNumber}
+              scrollMode=""
+              defaultScale={SpecialZoomLevel.PageFit}
+              theme={currentTheme}
+              plugins={
+                ([themePluginInstance],
+                [fullScreenPluginInstance],
+                [pageNavigationPluginInstance])
+              }
+              ViewMode={ViewMode.SinglePage}
+            />
+          </Worker>
+        </div>
+      </>
+    );
+  }
+  function FullscreenPdfViewer() {
+    return (
+      <>
+        <div className="pdf-viewer-container">
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
+            <Viewer
+              fileUrl={path}
+              className="viewer"
+              // width="50%"
+              initialPage={pageNumber}
+              scrollMode=""
+              defaultScale={SpecialZoomLevel.PageFit}
+              theme={currentTheme}
+              plugins={
+                ([themePluginInstance],
+                [fullScreenPluginInstance]
+                )
+              }
+              ViewMode={ViewMode.SinglePage}
+            />
+          </Worker>
+        </div>
+      </>
+    );
+  }
  
   return (
     <>
@@ -84,25 +149,57 @@ export default function ReadingPage(props) {
             </ThemeContext.Provider>
           </div>
 
-          <div className="fullscreeen-btn">
+          {/* <div className="currentpg">
+            <CurrentPageLabel>
+              {
+                (props) =>
+                  // setPageNumber(props.currentPage)
+                  props.currentPage > pageNumber
+                    ? setPageNumber(pageNumber + props.currentPage - pageNumber)
+                    : setPageNumber(pageNumber + pageNumber - props.currentPage)
+                // console.log(props.currentPage + 1)
+                // <span>{`${props.currentPage + 1} of ${
+                //   props.numberOfPages
+                // }`}</span>
+              }
+            </CurrentPageLabel>
+          </div> */}
+
+          <div
+            className="fullscreeen-btn"
+            onClick={() => {
+              switchButton(true);
+            }}
+          >
             <EnterFullScreen>
               {(props) => (
-                <button className="ful-btn"
-                  
+                <button
+                  className="ful-btn"
+                  // eslint-disable-next-line no-unused-expressions
                   onClick={props.onClick}
                 >
-                  <FullScreenIcon/>
+                  <FullScreenIcon />
                   {/* Enter fullscreen */}
                 </button>
               )}
             </EnterFullScreen>
           </div>
 
-          <div className="pageInput">
+          <div
+            className="pageInput"
+            onClick={() => {
+              switchButton(false);
+            }}
+          >
             <CurrentPageInput /> /{totalPage}
           </div>
 
-          <div className="chapter-option">
+          <div
+            className="chapter-option"
+            onClick={() => {
+              switchButton(false);
+            }}
+          >
             <Accordion>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
@@ -119,8 +216,9 @@ export default function ReadingPage(props) {
                         className="chapter-container"
                         onClick={() => {
                           setChapterName(e.name);
-                          setPageNumber(e.pageNo);
-                          jumpToPage(pageNumber);
+                          // setPageNumber(e.pageNo);
+                          jumpToPage(e.pageNo);
+                          // jumpToPage(pageNumber);
                           console.log(e.name + e.pageNo);
                         }}
                       >
@@ -134,7 +232,17 @@ export default function ReadingPage(props) {
           </div>
         </div>
 
-        <div className="pdf-viewer-container">
+        {togglebutton ? (
+          <>
+            <FullscreenPdfViewer />
+          </>
+        ) : (
+          <>
+            <PdfViewer />
+          </>
+        )}
+
+        {/* <div className="pdf-viewer-container">
           <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.2.146/build/pdf.worker.min.js">
             <Viewer
               fileUrl={path}
@@ -144,15 +252,19 @@ export default function ReadingPage(props) {
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
               theme={currentTheme}
+
               plugins={
-                ([pageNavigationPluginInstance],
-                [themePluginInstance],
-                [fullScreenPluginInstance])
+                (
+                  [themePluginInstance],
+                  [fullScreenPluginInstance]
+                  [pageNavigationPluginInstance]
+                )
               }
+
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
-        </div>
+        </div> */}
 
         {/***************************************  Working *************************************************/}
         {/* <Iframe
