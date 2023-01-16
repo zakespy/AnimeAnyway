@@ -1,6 +1,6 @@
 .reading-container {
   /* height:500px; */
-  height: 900px;
+  height: 1000px;
   /* height: auto; */
   width: 85%;
   /* background-color: rgba(246, 248, 248, 0.363); */
@@ -134,16 +134,25 @@
   left: 24%;
 }
 
-.theme-btn {
-  margin: 10px;
-  position: absolute;
-  top: 3.5%;
-  left: 70%;
-}
+  .theme-btn {
+    margin: 10px;
+    position: absolute;
+    top: 3.5%;
+    left: 70%;
+  }
 
 }
 
 @media screen and (max-width: 754px) {
+
+  .reading-container {
+    width: 100%;
+  }
+
+  .pdf-viewer-container {
+    width: 100%;
+  }
+
   .pageInput {
     padding: 0px 2px;
     height: 20px;
@@ -171,14 +180,14 @@
   position: absolute;
   top: 3.5%;
   left: 24%;
-}
+  }
 
-.theme-btn {
-  margin: 10px;
-  position: absolute;
-  top: 3.5%;
-  left: 72%;
-}
+  .theme-btn {
+    margin: 10px;
+    position: absolute;
+    top: 3.5%;
+    left: 72%;
+  }
 
 
 }

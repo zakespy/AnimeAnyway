@@ -247,7 +247,7 @@ export default function ReadingPage(props) {
             <Viewer
               fileUrl={path}
               className="viewer"
-              // width="50%"
+              width="100%"
               initialPage={pageNumber}
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
