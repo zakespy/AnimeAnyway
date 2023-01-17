@@ -59,7 +59,7 @@ export default function Footer() {
                 Developer Company
               </h2> */}
               <h4 style={{ fontSize: "20px", marginTop: "-35px" }}>
-                Support Us on
+                Developer Contact 
               </h4>
               <h4
                 style={{

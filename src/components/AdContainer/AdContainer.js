@@ -1,6 +1,6 @@
 import React from 'react'
-// import AdSense from 'react-adsense';
-import AdSense from 'react-adsense-ads';
+import AdSense from 'react-adsense';
+// import AdSense from 'react-adsense-ads';
 
 
 export default function AdContainer() {
