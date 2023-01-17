@@ -46,7 +46,7 @@ export default function ReadingPage(props) {
   const fullScreenPluginInstance = fullScreenPlugin();
   const { EnterFullScreen } = fullScreenPluginInstance;
 
-  const themePluginInstance = themePlugin(); 
+  const themePluginInstance =  themePlugin(); 
   const {SwitchThemeButton} = themePluginInstance;
 
   const [pageNumber,setPageNumber] = useState(0);
