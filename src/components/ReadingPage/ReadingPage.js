@@ -34,7 +34,7 @@ import { ThemeContext } from "@react-pdf-viewer/core";
 
 
 export default function ReadingPage(props) {
-  const location = useLocation();
+  const location = useLocation(); 
   const search = useLocation().search;
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
