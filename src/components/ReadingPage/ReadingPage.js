@@ -50,7 +50,7 @@ export default function ReadingPage(props) {
   const {SwitchThemeButton} = themePluginInstance;
 
   const [pageNumber,setPageNumber] = useState(0);
-  const [currentPageNo,setCurrentPageNo] = useState(pageNumber); 
+  const [currentPageNo,setCurrentPageNo] = useState(pageNumber);  
   const [chapters,setChapters] = useState([])
   const [totalPage,setTotalPage] = useState()
   const [chapterName,setChapterName] = useState("")
