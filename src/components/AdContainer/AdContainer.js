@@ -10,13 +10,13 @@ export default function AdContainer() {
 
             <div>
 
-                {/* <AdSense.Google
-                client='ca-pub-9478553584665182'
+                <AdSense.Google
+                client='ca-pub-8762191555564843'
                 slot='1641772231'
                 style={{ display: 'block' }}
                 layout='in-article'
                 format='fluid'
-            /> */}
+            />
 
                 {/* // auto full width responsive ads */}
                 {/* <AdSense.Google

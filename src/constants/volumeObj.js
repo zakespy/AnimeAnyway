@@ -171,6 +171,7 @@ export const translatedVolume = [
     image: require("../assets/images/back1.jpg"),
     name: "Year Two Volume 7",
     path: '../../assets/file/Year Two Volume 7.pdf',
+    totalPage: 294,
     chapter: [
       {
         name:"Year two Volume 7",
