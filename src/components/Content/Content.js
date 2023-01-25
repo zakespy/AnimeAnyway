@@ -27,6 +27,9 @@ export default function Content() {
     return (
       <>
         <div className="main-container">
+          <div className="headerName">
+            Anime Anyway Translations
+          </div>
           <div className="volume-container">
             <div className="card-container">
               {transVolumes.map((e) => {

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
 
 /* .custom-shape-divider-bottom-1671370168 {
     position: absolute;
@@ -39,7 +40,8 @@
             text-align: center;
             margin-top: 344px;
             /* font-size: xx-large; */
-            font-family: 'Dancing Script', cursive;
+            /* font-family: 'Dancing Script', cursive; */
+            font-family: 'Merriweather', serif;
             font-size: 66px;
             color: white;
             text-shadow: 2px 2px 8px black;
@@ -69,8 +71,9 @@
             text-align: center;
             margin-top: 300px;
             /* font-size: xx-large; */
-            font-family: 'Dancing Script', cursive;
-            font-size: 56px;
+            /* font-family: 'Dancing Script', cursive; */
+            font-family: 'Merriweather', serif;
+            font-size: 46px;
             color: white;
             text-shadow: 2px 2px 8px black;
             position: absolute;

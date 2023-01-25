@@ -81,8 +81,27 @@
   }
 
   .developer-link{
-    margin: 10px 30px;
+    /* margin: 10px 30px; */
+    /* margin-top: -10px; */
     width: 100px;
+    color:  rgba(255, 255, 255, 0.885);
+  }
+  .developer-link h4{
+    /* margin: 10px 30px;
+    width: 100px; */
+    margin-top: 0px;
+    color:  rgba(255, 255, 255, 0.885);
+  }
+
+  .developer-insta-links{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .developer-insta-links .icons{
+    margin-top: 1px;
+    /* display: flex;
+    flex-direction: row; */
   }
 
   .lastImage {
@@ -169,6 +188,30 @@
     background-size: cover;
   }
 
+  .developer-link{
+    /* margin: 10px 30px; */
+    /* margin-top: -10px; */
+    width: 100px;
+    color:  rgba(255, 255, 255, 0.885);
+  }
+  .developer-link h4{
+    /* margin: 10px 30px;
+    width: 100px; */
+    margin-top: 0px;
+    color:  rgba(255, 255, 255, 0.885);
+  }
+
+  .developer-insta-links{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .developer-insta-links .icons{
+    margin-top: 1px;
+    /* display: flex;
+    flex-direction: row; */
+  }
+
   /* .custom-shape-divider-top-1671373515 {
             position: absolute;
             top: 0;
@@ -233,7 +276,9 @@
   }
 
   .channel-link{
-    margin: 10px 30px;
+    /* margin: 10px 30px; */
+    margin: auto;
+    margin-bottom: 30px;
     width: 67%;
     text-align: center;
   }
@@ -257,6 +302,30 @@
     color: rgba(255, 255, 255, 0.885);
     margin-top: 9px;
     margin-left: 5px;
+  }
+
+  .developer-link{
+    /* margin: 10px 30px; */
+    margin: auto;
+    width: 100px;
+    color:  rgba(255, 255, 255, 0.885);
+  }
+  .developer-link h4{
+    /* margin: 10px 30px;
+    width: 100px; */
+    margin-top: 0px;
+    color:  rgba(255, 255, 255, 0.885);
+  }
+
+  .developer-insta-links{
+    margin-top: -10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .developer-insta-links .icons{
+    margin-top: 1px;
+    /* display: flex;
+    flex-direction: row; */
   }
 
 

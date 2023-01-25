@@ -146,13 +146,13 @@ export const volumeData = [
         "releaseDate": 90 / 10 / 2020,
         "name": "Year Two Volume 5"
     },
-    {
-        "volumeNumber": 18,
-        "driveURL": "https://drive.google.com/file/d/1z90BZVKzTDH7qLDT3-veYmpQcnDUApuo_/view",
-        "ytlink":"https://www.google.com",
-        "releaseDate": 90 / 10 / 2020,
-        "name": "Year Two Volume 6"
-    },
+    // {
+    //     "volumeNumber": 18,
+    //     "driveURL": "https://drive.google.com/file/d/1z90BZVKzTDH7qLDT3-veYmpQcnDUApuo_/view",
+    //     "ytlink":"https://www.google.com",
+    //     "releaseDate": 90 / 10 / 2020,
+    //     "name": "Year Two Volume 6"
+    // },
     
     // {
     //     "volumeNumber": 22,
@@ -163,12 +163,70 @@ export const volumeData = [
 ]
 
 export const translatedVolume = [
+  
+  {
+    volumeNumber: 18,
+    driveURL:
+    "https://drive.google.com/file/d/1z90BZVKzTDH7qLDT3-veYmpQcnDUApuo_/view",
+    releaseDate: 90 / 10 / 2020,
+    image: require("../assets/images/Year_Two_Volume_6.jpg"),
+    // image: require("../assets/images/back1.jpg"),
+    name: "Year Two Volume 6",
+    path: '../../assets/file/Year Two Volume 6.pdf',
+    totalPage: 285,
+    chapter: [
+      {
+        name:"Year two Volume 6",
+        pageNo:0
+      },
+      {
+        name: "Prologue",
+        pageNo:3,
+      },
+      {
+        name: "Chapter 1",
+        pageNo:6,
+      },
+      {
+        name: "Chapter 2",
+        pageNo:47,
+      },
+      {
+        name: "Chapter 3",
+        pageNo:76,
+      },
+      {
+        name: "Chapter 4",
+        pageNo:154,
+      },
+      {
+        name: "Chapter 5",
+        pageNo:192,
+      },
+      {
+        name: "Chapter 6",
+        pageNo:242,
+      },
+      // {
+      //   name: "Chapter 7",
+      //   pageNo:225,
+      // },
+      {
+        name: "Epilogue",
+        pageNo:266,
+      },
+      {
+        name: "Afterword",
+        pageNo:283,
+      },
+    ],
+  },
   {
     volumeNumber: 19,
     driveURL:
       "https://drive.google.com/file/d/1DEqpE0YPxkjc1490jfuQeS8AUI-knZu7r/view",
     releaseDate: 90 / 10 / 2020,
-    image: require("../assets/images/back1.jpg"),
+    image: require("../assets/images/Year_Two_Volume_7.jpg"),
     name: "Year Two Volume 7",
     path: '../../assets/file/Year Two Volume 7.pdf',
     totalPage: 294,
@@ -224,7 +282,7 @@ export const translatedVolume = [
     driveURL:
       "https://drive.google.com/file/d/1s72TDhpZ5ysHA90zz6yqMR2OPAG90dghDa/view",
     releaseDate: 90 / 10 / 2020,
-    image: require("../assets/images/back1.jpg"),
+    image: require("../assets/images/Year_Two_Volume_8.jpg"),
     name: "Year Two Volume 8",
     path: '../../assets/file/Year Two Volume 8.pdf',
     totalPage: 260,
@@ -270,48 +328,49 @@ export const translatedVolume = [
   {
     volumeNumber: 21,
     driveURL:
-      "https://drive.google.com/file/d/1fvwMvHn_4jcnWaTZBDLsubOOSmf8NpQm/view",
+      "https://drive.google.com/file/d/1vCM7A9T3WrsV66lVgCCp6i9BslD49Vy6/view",
     releaseDate: 90 / 10 / 2020,
-    image: require("../assets/images/back1.jpg"),
+    image: require("../assets/images/Volume_0.jpg"),
     name: "Volume 0",
     path: '../../assets/file/Volume 0.pdf',
+    totalPage: 131,
     chapter: [
       {
-        name:"Year two Volume 8",
+        name:"Volume 0",
         pageNo:0
       },
       {
         name: "Prologue",
-        pageNo:6,
+        pageNo:3,
       },
       {
         name: "Chapter 1",
-        pageNo:9,
+        pageNo:11,
       },
       {
         name: "Chapter 2",
-        pageNo:56,
+        pageNo:35,
       },
       {
         name: "Chapter 3",
-        pageNo:116,
+        pageNo:92,
       },
       {
         name: "Chapter 4",
-        pageNo:170,
+        pageNo:115,
       },
-      {
-        name: "Chapter 5",
-        pageNo:213,
-      },
-      {
-        name: "Epilogue",
-        pageNo:246,
-      },
-      {
-        name: "Afterword",
-        pageNo:258,
-      },
+      // {
+      //   name: "Chapter 5",
+      //   pageNo:213,
+      // },
+      // {
+      //   name: "Epilogue",
+      //   pageNo:246,
+      // },
+      // {
+      //   name: "Afterword",
+      //   pageNo:258,
+      // },
     ],
   },
 ];

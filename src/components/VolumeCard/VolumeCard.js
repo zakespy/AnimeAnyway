@@ -33,6 +33,7 @@ export default function VolumeCard({card, index}) {
             }}
             // style={style()}
           >
+            {console.log(card.e.image)}
             <div className="property-image-title">
               {/* <!-- Optional <h5>Card Title</h5> If you want it, turn on the CSS also. --> */}
             </div>

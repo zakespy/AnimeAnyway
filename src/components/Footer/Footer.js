@@ -71,16 +71,15 @@ export default function Footer() {
               >
                 services@asplay.tech
               </h4>
-              <h4
-                style={{
-                  fontSize: "20px",
-                  marginTop: "-10px",
-                  marginLeft: "-35px",
-                  color: "rgba(255, 255, 255, 0.885)",
-                }}
+              <a
+                href="https://www.instagram.com/_asplay_/?next=%2F"
+                target="_blank"
               >
-                support@asplay.tech
-              </h4>
+                <div className="developer-insta-links">
+                  <h4>_asplay_</h4>
+                  <InstagramIcon className="icons" />
+                </div>
+              </a>
             </div>
           </div>
         </div>

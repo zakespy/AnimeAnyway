@@ -11,7 +11,7 @@ export default function Header(){
             background:`url(${headerImage}) "linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0.2) 30%,rgba(0, 0, 0, 0.4) 55%,rgba(0, 0, 0, 0.2) 90%,rgba(255, 255, 255, 0) 100%)"`,backgroundRepeat:"no-repeat",backgroundSize:"cover"
           }}
         > 
-          <div className="channelName">Classroom Of Elite Translation</div>
+          <div className="channelName">Classroom Of The Elite Translation</div>
           {/* wavey part */}
           {/* <div class="custom-shape-divider-bottom-1671370168">
           <svg

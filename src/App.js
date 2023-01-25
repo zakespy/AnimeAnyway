@@ -17,9 +17,9 @@ function App() {
     <>
       <BrowserRouter>
         <Header/>
-        <div className="ads" style={{height:"100px", width:"500px"}}>
+        {/* <div className="ads" style={{height:"100px", width:"500px"}}>
           <AdContainer />
-        </div>
+        </div> */}
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/download" element={<DownloadPage />} />
