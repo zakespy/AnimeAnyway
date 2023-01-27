@@ -53,7 +53,7 @@ export default function Content() {
               <a href="https://youtu.be/QuanaclRcy8">
                 New Illustration for Year 2 Volume 9 Revealed. Click to watch
               </a>
-              <br />
+              <br /> <br />
               <a href="https://youtu.be/ENcANeWv5GM">
                 2nd Illustration for Year 2 Volume 9 Revealed. Click to watch
               </a>
@@ -67,7 +67,7 @@ export default function Content() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <h1 className="previousVolume">Previous Volume</h1>
+              <h1 className="previousVolume">Previous Volumes</h1>
             </AccordionSummary>
             <AccordionDetails>
               <div className="link-container">

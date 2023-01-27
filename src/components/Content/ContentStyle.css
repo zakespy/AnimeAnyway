@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
 
 .main-container {
   height: fit-content;
@@ -21,39 +21,39 @@
   box-shadow: 1px 1px 7px grey;
 }
 
-.headerName{
+.headerName {
   margin: auto;
   text-align: center;
-  font-family: 'Hind Siliguri', sans-serif;
-  color:#7b1616;
+  font-family: "Hind Siliguri", sans-serif;
+  color: #7b1616;
   font-size: 30px;
   font-weight: 700;
 }
 
-.volume-container{
+.volume-container {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.card-container{
+.card-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.accord-container{
-  width:97%;
+.accord-container {
+  width: 97%;
   height: auto;
   padding: 10px;
 }
 
-.accordion{
-  width:100%;
+.accordion {
+  width: 100%;
 }
 
-.previousVolume{
+.previousVolume {
   font-size: 20px;
   font-weight: 600;
 }
@@ -84,7 +84,7 @@
 
 .info-container {
   margin: 2rem 2rem 1rem 0;
-  height: 30vh;
+  height: 40vh;
   min-height: 300px;
   width: 50%;
   background: rgba(251, 255, 0, 0.467);
@@ -92,9 +92,12 @@
   border-radius: 1rem;
   padding: 20px;
   font-size: 20px;
-  color:rgb(48, 47, 47)
+  color: rgb(48, 47, 47);
 }
 
+.info-container > a {
+  color: black;
+}
 .volume-url {
   margin: 1px;
   font-size: 1.3rem;
@@ -112,31 +115,22 @@
   border: 2px solid rgb(48 93 103);
 }
 
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1440px) {
-  .headerName{
+  .headerName {
     margin: auto;
     text-align: center;
-    font-family: 'Hind Siliguri', sans-serif;
-    color:#7b1616;
+    font-family: "Hind Siliguri", sans-serif;
+    color: #7b1616;
     font-size: 20px;
     font-weight: 700;
   }
 
-  .volume-container{
+  .volume-container {
     display: flex;
     flex-direction: column;
   }
 
-
- .main-container {
+  .main-container {
     flex-direction: column;
     justify-content: center;
     margin-top: 100px;
@@ -159,6 +153,3 @@
   padding: 10px;
 } */
 }
-
-
-
