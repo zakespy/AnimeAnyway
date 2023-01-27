@@ -1,8 +1,8 @@
-import React from "react";
-import './FooterStyle.css';
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import React from "react";
+import './FooterStyle.css';
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footerInfo">
           <div className="channel-info">
             <h1>Anime Anyway</h1>
-            <h3>Channel for all Classroom of elite novel and translation</h3>
+            <h3>Channel for all Classroom of the elite novel translations</h3>
             {/* <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi voluptatum nulla eligendi doloribus recusandae voluptates minima incidunt ducimus quo exercitationem, corrupti laboriosam illo libero, sequi, quae optio deleniti consequatur?</h3> */}
           </div>
           <div className="creator-info">
@@ -59,7 +59,7 @@ export default function Footer() {
                 Developer Company
               </h2> */}
               <h4 style={{ fontSize: "20px", marginTop: "-35px" }}>
-                Developer Contact 
+                Developer Contact
               </h4>
               <h4
                 style={{
