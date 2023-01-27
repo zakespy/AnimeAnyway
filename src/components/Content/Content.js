@@ -49,6 +49,14 @@ export default function Content() {
               Year 2 Volume 9 is estimated to release on february 25th, and
               trial version will be released early in february. Consider
               subscribing to the channel for more updates!
+              <br /> <br />
+              <a href="https://youtu.be/QuanaclRcy8">
+                New Illustration for Year 2 Volume 9 Revealed. Click to watch
+              </a>
+              <br />
+              <a href="https://youtu.be/ENcANeWv5GM">
+                2nd Illustration for Year 2 Volume 9 Revealed. Click to watch
+              </a>
             </strong>
           </div>
         </div>
@@ -72,8 +80,8 @@ export default function Content() {
                         className="volume-url"
                         style={{
                           background: `${volumeData.indexOf(vol) % 2
-                              ? "rgba(245, 245, 245, 0.8)"
-                              : "rgba(255, 255, 255, 0.8)"
+                            ? "rgba(245, 245, 245, 0.8)"
+                            : "rgba(255, 255, 255, 0.8)"
                             }`,
                         }}
                         target="_blank"
