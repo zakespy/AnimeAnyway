@@ -84,7 +84,7 @@
 
 .info-container {
   margin: 2rem 2rem 1rem 0;
-  height: 40vh;
+  height: 50vh;
   min-height: 300px;
   width: 50%;
   background: rgba(251, 255, 0, 0.467);
@@ -95,9 +95,6 @@
   color: rgb(48, 47, 47);
 }
 
-.info-container > a {
-  color: black;
-}
 .volume-url {
   margin: 1px;
   font-size: 1.3rem;
@@ -152,4 +149,8 @@
   height: auto;
   padding: 10px;
 } */
+}
+
+.info-container {
+  color: black;
 }
