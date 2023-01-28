@@ -79,7 +79,7 @@ export default function ReadingPage(props) {
     setChapterName(translatedVolume[volume_index].chapter[0].name);
     setTotalPage(translatedVolume[volume_index].totalPage);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
-
+    window.scrollTo(0,0);
    
     // console.log(newWidth)
     // console.log(zoomIndex)
