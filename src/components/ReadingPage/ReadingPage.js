@@ -201,7 +201,8 @@ export default function ReadingPage(props) {
             />
           </Worker>
           <div className="scrollToTop" onClick={()=>{jumpToPage(0)}}>
-            <button className="scrollToTop-btn"onClick={()=>{jumpToPage(0)}}>
+            {/* <button className="scrollToTop-btn"onClick={()=>{jumpToPage(0)}}> */}
+            <button className="scrollToTop-btn"onClick={()=>{window.scrollTo(0,0)}}>
             <NorthIcon/>
             </button>
           </div>
