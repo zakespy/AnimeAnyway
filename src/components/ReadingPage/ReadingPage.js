@@ -5,6 +5,7 @@ import { translatedVolume } from "../../constants/volumeObj.js";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
+import NorthIcon from '@mui/icons-material/North';
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Iframe from "react-iframe";
@@ -33,7 +34,15 @@ import { ThemeContext } from "@react-pdf-viewer/core";
 export default function ReadingPage(props) {
   const location = useLocation(); 
   const search = useLocation().search;
-  const [zoomIndex,setZoomIndex] = useState(1.9);
+
+   var zoomIndex = 1.8
+   // eslint-disable-next-line no-restricted-globals
+   const screenWidth = screen.availWidth
+   const newWidth = (screenWidth*0.001875) - 0.125
+   // eslint-disable-next-line no-restricted-globals 
+   screenWidth >= 1024?console.log("width = 1024"):zoomIndex = newWidth
+ 
+
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
 
@@ -70,7 +79,12 @@ export default function ReadingPage(props) {
     setChapterName(translatedVolume[volume_index].chapter[0].name);
     setTotalPage(translatedVolume[volume_index].totalPage);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
+
+   
+    // console.log(newWidth)
+    // console.log(zoomIndex)
   },[])
+
 
   const path = location.state?.path;
 
@@ -186,7 +200,15 @@ export default function ReadingPage(props) {
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
+          <div className="scrollToTop" onClick={()=>{jumpToPage(0)}}>
+            <button className="scrollToTop-btn"onClick={()=>{jumpToPage(0)}}>
+            <NorthIcon/>
+            </button>
+          </div>
         </div>
+
+        
+
       </div>
     </>
   );
