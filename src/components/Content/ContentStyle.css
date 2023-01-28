@@ -84,7 +84,8 @@
 
 .info-container {
   margin: 2rem 2rem 1rem 0;
-  height: 50vh;
+  /* height: 50vh; */
+  height: auto;
   min-height: 300px;
   width: 50%;
   background: rgba(251, 255, 0, 0.467);
@@ -93,6 +94,14 @@
   padding: 20px;
   font-size: 20px;
   color: rgb(48, 47, 47);
+}
+
+.new-link{
+  color: black;
+}
+
+.new-link:hover{
+  color: rgb(129, 129, 129);
 }
 
 .volume-url {
@@ -142,6 +151,7 @@
   .info-container {
     margin: 2rem auto;
     min-width: 81.6%;
+    height: auto;
   }
 
   /* .accord-container{

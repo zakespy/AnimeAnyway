@@ -50,11 +50,11 @@ export default function Content() {
               trial version will be released early in february. Consider
               subscribing to the channel for more updates!
               <br /> <br />
-              <a href="https://youtu.be/QuanaclRcy8">
+              <a href="https://youtu.be/QuanaclRcy8" className="new-link" target="_blank">
                 New Illustration for Year 2 Volume 9 Revealed. Click to watch
               </a>
               <br /> <br />
-              <a href="https://youtu.be/ENcANeWv5GM">
+              <a href="https://youtu.be/ENcANeWv5GM" className="new-link" target="_blank">
                 2nd Illustration for Year 2 Volume 9 Revealed. Click to watch
               </a>
             </strong>
