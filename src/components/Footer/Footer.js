@@ -2,6 +2,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import React from "react";
+import banner from './channels4_banner(1).jpg';
 import './FooterStyle.css';
 
 export default function Footer() {
@@ -83,7 +84,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="lastImage"></div>
+        {/* <div className="lastImage"></div> */}
+        <img src={banner}  alt="banner"></img>
         {/* wavey part */}
         {/* <div class="custom-shape-divider-top-1671373515">
             <svg
