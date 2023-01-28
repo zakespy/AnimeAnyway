@@ -30,12 +30,10 @@ import { DarkIcon, LightIcon } from "@react-pdf-viewer/theme";
 import { ThemeContext } from "@react-pdf-viewer/core";
 
 
-
-
-
 export default function ReadingPage(props) {
   const location = useLocation(); 
   const search = useLocation().search;
+  const [zoomIndex,setZoomIndex] = useState(1.9);
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
 
@@ -43,8 +41,16 @@ export default function ReadingPage(props) {
   const { jumpToPage, CurrentPageInput, CurrentPageLabel } =
     pageNavigationPluginInstance;
 
-  const fullScreenPluginInstance = fullScreenPlugin();
-  const { EnterFullScreen } = fullScreenPluginInstance;
+  const fullScreenPluginInstance = fullScreenPlugin({
+    // Zoom to fit the screen after entering and exiting the full screen mode
+    onEnterFullScreen: (zoom) => {
+        zoom(SpecialZoomLevel.zoom = zoomIndex);
+    },
+    onExitFullScreen: (zoom) => {
+        zoom(SpecialZoomLevel.PageFit);
+    },
+},);
+  const { EnterFullScreen ,EnterFullScreenMenuItem} = fullScreenPluginInstance;
 
   const themePluginInstance =  themePlugin(); 
   const {SwitchThemeButton} = themePluginInstance;
@@ -92,6 +98,11 @@ export default function ReadingPage(props) {
           >
             <EnterFullScreen>
               {(props) => (
+                // onEnterFullScreen =>(zoom)=>{
+                //   zoom(SpecialZoomLevel.PageWidth);
+                // },
+                <>
+                
                 <button
                   className="ful-btn"
                   // eslint-disable-next-line no-unused-expressions
@@ -100,6 +111,7 @@ export default function ReadingPage(props) {
                   <FullScreenIcon />
                   {/* Enter fullscreen */}
                 </button>
+                </>
               )}
             </EnterFullScreen>
           </div>
