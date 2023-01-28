@@ -113,12 +113,17 @@
   right: 10px;
   /* background-color: aqua; */
   margin-left: 20px;
+  cursor: pointer;
 }
+/* .scrollToTop:{
+  cursor: pointer;
+} */
 
 .scrollToTop-btn{
   background-color: #77777900;
   border:none;
   color: rgb(108, 107, 107);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 754px) {
