@@ -361,7 +361,7 @@ export const translatedVolume = [
       },
       {
         name: "Chapter 5",
-        pageNo: 131,
+        pageNo: 130,
       },
       // {
       //   name: "Epilogue",
