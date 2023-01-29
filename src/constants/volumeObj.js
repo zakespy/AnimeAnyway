@@ -328,12 +328,12 @@ export const translatedVolume = [
   {
     volumeNumber: 21,
     driveURL:
-      "https://drive.google.com/file/d/1vCM7A9T3WrsV66lVgCCp6i9BslD49Vy6/view",
+      "https://drive.google.com/file/d/1H1QVpQsDqkHmZ3SUH__sC6ennlLSi_s-/view?usp=drivesdk",
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/Volume_0.jpg"),
     name: "Volume 0",
     path: '../../assets/file/Volume 0.pdf',
-    totalPage: 131,
+    totalPage: 201,
     chapter: [
       {
         name: "Volume 0",
