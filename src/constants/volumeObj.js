@@ -333,7 +333,7 @@ export const translatedVolume = [
     image: require("../assets/images/Volume_0.jpg"),
     name: "Volume 0",
     path: '../../assets/file/Volume 0.pdf',
-    totalPage: 201,
+    totalPage: 246,
     chapter: [
       {
         name: "Volume 0",
@@ -362,6 +362,10 @@ export const translatedVolume = [
       {
         name: "Chapter 5",
         pageNo: 130,
+      },
+      {
+        name: "Chapter 6",
+        pageNo: 199,
       },
       // {
       //   name: "Epilogue",
