@@ -57,6 +57,10 @@ export default function Content() {
               <a href="https://youtu.be/ENcANeWv5GM" className="new-link" target="_blank">
                 2nd Illustration for Year 2 Volume 9 Revealed. Click to watch
               </a>
+              <br /> <br />
+              <a href="https://www.youtube.com/watch?v=IrAEI9LuGKo" className="new-link" target="_blank">
+                Year 2 Volume 9 Synopsis Revealed. Click to watch
+              </a>
             </strong>
           </div>
         </div>
