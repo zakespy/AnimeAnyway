@@ -167,7 +167,7 @@ export const translatedVolume = [
   {
     volumeNumber: 18,
     driveURL:
-      "https://drive.google.com/file/d/1z90BZVKzTDH7qLDT3-veYmpQcnDUApuo_/view",
+      "https://drive.google.com/file/d/1z9BZVKzTDH7qLDT3-veYmpQcnDUApuo_/view",
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/Year_Two_Volume_6.jpg"),
     // image: require("../assets/images/back1.jpg"),
@@ -224,7 +224,7 @@ export const translatedVolume = [
   {
     volumeNumber: 19,
     driveURL:
-      "https://drive.google.com/file/d/1DEqpE0YPxkjc1490jfuQeS8AUI-knZu7r/view",
+      "https://drive.google.com/file/d/1DEqpE0YPxkjc149jfuQeS8AUI-knZu7r/view",
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/Year_Two_Volume_7.jpg"),
     name: "Year Two Volume 7",
@@ -280,7 +280,7 @@ export const translatedVolume = [
   {
     volumeNumber: 20,
     driveURL:
-      "https://drive.google.com/file/d/1s72TDhpZ5ysHA90zz6yqMR2OPAG90dghDa/view",
+      "https://drive.google.com/file/d/1s72TDhpZ5ysHA9zz6yqMR2OPAG9dghDa/view",
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/Year_Two_Volume_8.jpg"),
     name: "Year Two Volume 8",
