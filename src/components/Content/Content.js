@@ -45,11 +45,6 @@ export default function Content() {
           </div>
           <div className="info-container">
             <strong>
-              Volume 0 will be translated by february 10th. <br /> <br />
-              Year 2 Volume 9 is estimated to release on february 25th, and
-              trial version will be released early in february. Consider
-              subscribing to the channel for more updates!
-              <br /> <br />
               <a href="https://youtu.be/QuanaclRcy8" className="new-link" target="_blank">
                 New Illustration for Year 2 Volume 9 Revealed. Click to watch
               </a>

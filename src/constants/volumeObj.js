@@ -328,7 +328,7 @@ export const translatedVolume = [
   {
     volumeNumber: 21,
     driveURL:
-      "https://drive.google.com/file/d/1H1QVpQsDqkHmZ3SUH__sC6ennlLSi_s-/view?usp=drivesdk",
+      "https://drive.google.com/file/d/1pTCxZ9rQCk-pDRuoxKfk3k0EsnfmUD2B/view",
     releaseDate: 90 / 10 / 2020,
     image: require("../assets/images/Volume_0.jpg"),
     name: "Volume 0",
@@ -341,40 +341,40 @@ export const translatedVolume = [
       },
       {
         name: "Prologue",
-        pageNo: 3,
+        pageNo: 9,
       },
       {
         name: "Chapter 1",
-        pageNo: 11,
+        pageNo: 17,
       },
       {
         name: "Chapter 2",
-        pageNo: 35,
+        pageNo: 41,
       },
       {
         name: "Chapter 3",
-        pageNo: 92,
+        pageNo: 98,
       },
       {
         name: "Chapter 4",
-        pageNo: 115,
+        pageNo: 121,
       },
       {
         name: "Chapter 5",
-        pageNo: 130,
+        pageNo: 136,
       },
       {
         name: "Chapter 6",
-        pageNo: 199,
+        pageNo: 205,
       },
-      // {
-      //   name: "Epilogue",
-      //   pageNo:246,
-      // },
-      // {
-      //   name: "Afterword",
-      //   pageNo:258,
-      // },
+      {
+        name: "Epilogue",
+        pageNo: 250,
+      },
+      {
+        name: "Afterword",
+        pageNo: 270,
+      },
     ],
   },
 ];
