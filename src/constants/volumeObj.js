@@ -341,39 +341,39 @@ export const translatedVolume = [
       },
       {
         name: "Prologue",
-        pageNo: 9,
+        pageNo: 8,
       },
       {
         name: "Chapter 1",
-        pageNo: 17,
+        pageNo: 16,
       },
       {
         name: "Chapter 2",
-        pageNo: 41,
+        pageNo: 40,
       },
       {
         name: "Chapter 3",
-        pageNo: 98,
+        pageNo: 97,
       },
       {
         name: "Chapter 4",
-        pageNo: 121,
+        pageNo: 120,
       },
       {
         name: "Chapter 5",
-        pageNo: 136,
+        pageNo: 135,
       },
       {
         name: "Chapter 6",
-        pageNo: 205,
+        pageNo: 204,
       },
       {
         name: "Epilogue",
-        pageNo: 250,
+        pageNo: 249,
       },
       {
         name: "Afterword",
-        pageNo: 270,
+        pageNo: 269,
       },
     ],
   },
