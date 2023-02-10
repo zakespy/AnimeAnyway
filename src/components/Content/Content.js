@@ -33,13 +33,12 @@ export default function Content() {
           <div className="card-container">
             {transVolumes.map((e) => {
               return (
-                <>
+                <React.Fragment key={e.volumeNumber}>
                   <VolumeCard
                     card={{ e }}
-                    key={e.volumeNumber}
                     index={translatedVolume.indexOf(e)}
                   />
-                </>
+                </React.Fragment>
               );
             })}
           </div>
@@ -72,7 +71,7 @@ export default function Content() {
               <div className="link-container">
                 {volumes.map((vol) => {
                   return (
-                    <>
+                    <React.Fragment key={vol.volumeNumber}>
                       <a
                         // href={vol.ytlink}
                         href="https://www.youtube.com/watch?v=CAkMA_DsT-I&list=PLgFd4QA43aqVIIrukJI6fqJNOv2g0k48N&index=2"
@@ -84,11 +83,11 @@ export default function Content() {
                             }`,
                         }}
                         target="_blank"
-                        key={vol.volumeNumber} rel="noreferrer"
+                        rel="noreferrer"
                       >
                         {vol.name}
                       </a>
-                    </>
+                    </React.Fragment>
                   );
                 })}
               </div>

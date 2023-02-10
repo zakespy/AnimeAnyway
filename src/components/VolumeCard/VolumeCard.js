@@ -1,11 +1,11 @@
+import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import '../VolumeCard/VolumeCardStyle.css'
+import '../VolumeCard/VolumeCardStyle.css';
 // import '../../assets/images/back1.jpg'
 
 
-export default function VolumeCard({card, index}) {
+export default function VolumeCard({ card, index }) {
 
   // const imageURl = React.lazy(() => import("../../assets/images/back1.jpg"));
   // console.log(imageURl)
@@ -31,7 +31,7 @@ export default function VolumeCard({card, index}) {
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
             }}
-            // style={style()}
+          // style={style()}
           >
             {console.log(card.e.image)}
             <div className="property-image-title">
@@ -47,17 +47,17 @@ export default function VolumeCard({card, index}) {
             </p> */}
           </div>
           <div className="property-social-icons">
-            <a href="#">
-              <div className="read-button">
-                <Link
-                  to={`/read?volume=${index}`}
-                  state={{ path: card.e.path }}
-                  className="downloadbutton"
-                >
-                  Read
-                </Link>
-              </div>
-            </a>
+
+            <div className="read-button">
+              <Link
+                to={`/read?volume=${index}`}
+                state={{ path: card.e.path }}
+                className="downloadbutton"
+              >
+                Read
+              </Link>
+            </div>
+
             <Link to={`/download?volume=${index}`} className="downloadbutton" >
               <FileDownloadIcon className="downloadbutton" />
             </Link>
