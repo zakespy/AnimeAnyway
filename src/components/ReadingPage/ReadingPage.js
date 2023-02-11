@@ -63,7 +63,7 @@ export default function ReadingPage(props) {
 
   useEffect(() => {
     setChapters(translatedVolume[volume_index].chapter);
-    console.log(translatedVolume[volume_index].chapter[0]);
+    // console.log(translatedVolume[volume_index].chapter[0]);
     setChapterName(translatedVolume[volume_index].chapter[0].name);
     setTotalPage(translatedVolume[volume_index].totalPage);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
@@ -74,7 +74,7 @@ export default function ReadingPage(props) {
   }, [])
 
 
-  const path = location.state?.path;
+  const path = translatedVolume[volume_index].path;
 
   const switchButton = (bool) => {
     setToggleButton(bool);
@@ -152,7 +152,7 @@ export default function ReadingPage(props) {
                           setChapterName(e.name);
                           jumpToPage(e.pageNo);
                           // jumpToPage(pageNumber);
-                          console.log(e.name + e.pageNo);
+                          // console.log(e.name + e.pageNo);
                         }}
                       >
                         {e.name}

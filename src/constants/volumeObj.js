@@ -163,7 +163,6 @@ export const volumeData = [
 ]
 
 export const translatedVolume = [
-
   {
     volumeNumber: 18,
     driveURL:
