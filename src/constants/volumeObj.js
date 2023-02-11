@@ -332,6 +332,7 @@ export const translatedVolume = [
     image: require("../assets/images/Volume_0.jpg"),
     name: "Volume 0",
     path: '../../assets/file/Volume 0.pdf',
+    darkPath: '../../assets/file/Volume 0(dark).pdf',
     totalPage: 270,
     chapter: [
       {

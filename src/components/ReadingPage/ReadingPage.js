@@ -59,6 +59,7 @@ export default function ReadingPage(props) {
   const [chapterName, setChapterName] = useState("")
   const [currentTheme, setCurrentTheme] = React.useState("light");
   const [togglebutton, setToggleButton] = React.useState(true);
+  const [pdfButton,setPdfButton] = React.useState(true);
   const themeContext = { currentTheme, setCurrentTheme };
 
   useEffect(() => {
@@ -68,24 +69,33 @@ export default function ReadingPage(props) {
     setTotalPage(translatedVolume[volume_index].totalPage);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
     window.scrollTo(0, 0);
-
     // console.log(newWidth)
     // console.log(zoomIndex)
   }, [])
 
 
-  const path = translatedVolume[volume_index].path;
+  const lightPath = translatedVolume[volume_index].path;
+  const darkPath = translatedVolume[volume_index].darkPath;
+
+  let path
+  pdfButton?path=lightPath:path=darkPath
 
   const switchButton = (bool) => {
     setToggleButton(bool);
   }
 
+  const changePDF = ()=>{
+    setPdfButton(!pdfButton)
+    // pdfButton?path=lightPath:path=darkPath
+  }
 
   return (
     <>
       <div className="reading-container">
         <div className="label-tab">
-          <div className="theme-btn">
+          <div className="theme-btn" onClick={()=>{
+                changePDF()
+              }}>
             <ThemeContext.Provider value={themeContext} key={pageNumber}>
               <SwitchThemeButton />
             </ThemeContext.Provider>
