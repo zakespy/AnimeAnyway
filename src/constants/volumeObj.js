@@ -172,6 +172,7 @@ export const translatedVolume = [
     // image: require("../assets/images/back1.jpg"),
     name: "Year Two Volume 6",
     path: '../../assets/file/Year Two Volume 6.pdf',
+    darkPath: '../../assets/file/Year Two Volume 6.pdf',
     totalPage: 285,
     chapter: [
       {
@@ -228,6 +229,7 @@ export const translatedVolume = [
     image: require("../assets/images/Year_Two_Volume_7.jpg"),
     name: "Year Two Volume 7",
     path: '../../assets/file/Year Two Volume 7.pdf',
+    darkPath: '../../assets/file/Year Two Volume 7.pdf',
     totalPage: 294,
     chapter: [
       {
@@ -284,6 +286,7 @@ export const translatedVolume = [
     image: require("../assets/images/Year_Two_Volume_8.jpg"),
     name: "Year Two Volume 8",
     path: '../../assets/file/Year Two Volume 8.pdf',
+    darkPath: '../../assets/file/Year Two Volume 8.pdf',
     totalPage: 260,
     chapter: [
       {
