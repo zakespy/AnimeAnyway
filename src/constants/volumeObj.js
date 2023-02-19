@@ -380,4 +380,25 @@ export const translatedVolume = [
       },
     ],
   },
+  {
+    volumeNumber: 22,
+    driveURL:
+      "https://drive.google.com/file/d/1pTCxZ9rQCk-pDRuoxKfk3k0EsnfmUD2B/view",
+    releaseDate: 25 / 2 / 2023,
+    image: require("../assets/images/Year_Two_Volume_9.jpg"),
+    name: "Year Two Volume 9",
+    path: '../../assets/file/Year Two Volume 9.pdf',
+    darkPath: '../../assets/file/Year Two Volume 9.pdf',
+    totalPage: 3,
+    chapter: [
+      {
+        name: "Year Two Volume 9",
+        pageNo: 0
+      },
+      {
+        name: "Prologue",
+        pageNo: 0,
+      },
+    ],
+  },
 ];
