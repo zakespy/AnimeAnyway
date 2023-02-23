@@ -3,6 +3,7 @@ import NorthIcon from '@mui/icons-material/North';
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
+import { light } from "@mui/material/styles/createPalette.js";
 import Typography from "@mui/material/Typography";
 import { SpecialZoomLevel, ThemeContext, Viewer, ViewMode, Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
@@ -25,6 +26,7 @@ import "../ReadingPage/ReadingPageStyle.css";
 export default function ReadingPage(props) {
   const location = useLocation();
   const search = useLocation().search;
+
   var zoomIndex = 1.8
   // eslint-disable-next-line no-restricted-globals
   const screenWidth = screen.availWidth
@@ -32,8 +34,10 @@ export default function ReadingPage(props) {
   // eslint-disable-next-line no-restricted-globals 
   screenWidth >= 1024 ? console.log("width = 1024") : zoomIndex = newWidth
 
-  var volume_index = 0;
+  var volume_index = 0, theme = "light";
   volume_index = new URLSearchParams(search).get("volume");
+  theme = new URLSearchParams(search).get("theme");
+
   const pageNavigationPluginInstance = pageNavigationPlugin();
   const { jumpToPage, CurrentPageInput } =
     pageNavigationPluginInstance;
@@ -57,9 +61,9 @@ export default function ReadingPage(props) {
   const [chapters, setChapters] = useState([])
   const [totalPage, setTotalPage] = useState()
   const [chapterName, setChapterName] = useState("")
-  const [currentTheme, setCurrentTheme] = React.useState("dark");
+  const [currentTheme, setCurrentTheme] = React.useState(theme);
   const [togglebutton, setToggleButton] = React.useState(true);
-  const [pdfButton, setPdfButton] = React.useState(true);
+  const [pdfButton, setPdfButton] = React.useState(theme);
   const themeContext = { currentTheme, setCurrentTheme };
 
   useEffect(() => {
@@ -75,17 +79,18 @@ export default function ReadingPage(props) {
 
 
   const darkPath = translatedVolume[volume_index].darkPath;
-  const lightPath = darkPath;
+  const lightPath = translatedVolume[volume_index].path;
 
   let path
-  pdfButton ? path = lightPath : path = darkPath
+  pdfButton == "light" ? path = lightPath : path = darkPath
 
   const switchButton = (bool) => {
     setToggleButton(bool);
   }
 
   const changePDF = () => {
-    setPdfButton(!pdfButton)
+    if (pdfButton == "light") { setPdfButton("dark") }
+    else { setPdfButton("light") }
     // pdfButton?path=lightPath:path=darkPath
   }
 

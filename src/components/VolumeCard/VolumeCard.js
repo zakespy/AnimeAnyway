@@ -50,7 +50,7 @@ export default function VolumeCard({ card, index }) {
 
             <div className="read-button">
               <Link
-                to={`/read?volume=${index}`}
+                to={`/read?volume=${index}&theme=light`}
                 state={{ path: card.e.path }}
                 className="downloadbutton"
               >
