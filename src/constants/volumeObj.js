@@ -388,8 +388,8 @@ export const translatedVolume = [
     image: require("../assets/images/Year_Two_Volume_9.jpg"),
     name: "Year Two Volume 9",
     path: '../../assets/file/Year Two Volume 9.pdf',
-    darkPath: '../../assets/file/Year Two Volume 9.pdf',
-    totalPage: 3,
+    darkPath: '../../assets/file/Year Two Volume 9(dark).pdf',
+    totalPage: 58,
     chapter: [
       {
         name: "Year Two Volume 9",
@@ -397,7 +397,11 @@ export const translatedVolume = [
       },
       {
         name: "Prologue",
-        pageNo: 0,
+        pageNo: 8,
+      },
+      {
+        name: "Chapter 1",
+        pageNo: 11,
       },
     ],
   },

@@ -44,7 +44,7 @@ export default function Content() {
           </div>
           <div className="info-container">
             <strong>
-              Year 2 Volume 9 Prologue is translated, full version will be out on 25th February and translated within a few weeks.
+              Year 2 Volume 9 trial is translated, full version will be out on 25th February and translated within a few weeks.
               <br /> <br />
               <a href="https://youtu.be/QuanaclRcy8" className="new-link" target="_blank">
                 New Illustration for Year 2 Volume 9 Revealed. Click to watch
