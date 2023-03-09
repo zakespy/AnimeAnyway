@@ -3,13 +3,12 @@ import NorthIcon from '@mui/icons-material/North';
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import { light } from "@mui/material/styles/createPalette.js";
 import Typography from "@mui/material/Typography";
 import { SpecialZoomLevel, ThemeContext, Viewer, ViewMode, Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import {
-  FullScreenIcon, fullScreenPlugin
+  fullScreenPlugin
 } from "@react-pdf-viewer/full-screen";
 import "@react-pdf-viewer/full-screen/lib/styles/index.css";
 import {
@@ -21,6 +20,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { translatedVolume } from "../../constants/volumeObj.js";
 import "../ReadingPage/ReadingPageStyle.css";
+import "./DarkMode.css";
+import { ReactComponent as Moon } from "./Moon.svg";
+import { ReactComponent as Sun } from "./Sun.svg";
 
 
 export default function ReadingPage(props) {
@@ -87,7 +89,14 @@ export default function ReadingPage(props) {
   const switchButton = (bool) => {
     setToggleButton(bool);
   }
-
+  useEffect(() => {
+    if (pdfButton == "dark") {
+      document.getElementById('darkmode-toggle').checked = true;
+    } else {
+      document.getElementById('darkmode-toggle').checked = false;
+    }
+    // set el height and width etc.
+  }, [pdfButton])
   const changePDF = () => {
     if (pdfButton == "light") { setPdfButton("dark") }
     else { setPdfButton("light") }
@@ -98,14 +107,36 @@ export default function ReadingPage(props) {
     <>
       <div className="reading-container">
         <div className="label-tab">
+          <div className='dark_mode_2'>
+            <input
+              className='dark_mode_input'
+              type='checkbox'
+              id='darkmode-toggle'
+            />
+            <label className='dark_mode_label' for='darkmode-toggle'>
+              <Sun />
+              <Moon />
+            </label>
+          </div>
           <div className="theme-btn" onClick={() => {
             changePDF()
           }}>
-            <ThemeContext.Provider value={themeContext} key={pageNumber}>
-              <SwitchThemeButton />
+
+            <ThemeContext.Provider value={themeContext}>
+              <div className="switchthemebtn">
+                <div className="bt1">
+
+                  <SwitchThemeButton />
+                </div>
+                <div className="bt2">
+
+                  <SwitchThemeButton />
+                </div>
+
+              </div>
+
             </ThemeContext.Provider>
           </div>
-
 
           <div
             className="fullscreeen-btn"
@@ -125,7 +156,7 @@ export default function ReadingPage(props) {
                     // eslint-disable-next-line no-unused-expressions
                     onClick={props.onClick}
                   >
-                    <FullScreenIcon />
+                    <img src="https://img.icons8.com/windows/32/null/fit-to-width--v1.png" />
                     {/* Enter fullscreen */}
                   </button>
                 </>

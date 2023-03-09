@@ -1,19 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import headerImage from "../../cl2-header.png";
 import './HeaderStyle.css';
-import headerImage from "../../cl2-header.png"
 
-export default function Header(){
-    return (
-      <>
-        <div
-          className="channelHeader"
-          style={{
-            background:`url(${headerImage}) "linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0.2) 30%,rgba(0, 0, 0, 0.4) 55%,rgba(0, 0, 0, 0.2) 90%,rgba(255, 255, 255, 0) 100%)"`,backgroundRepeat:"no-repeat",backgroundSize:"cover"
-          }}
-        > 
-          <div className="channelName">Classroom Of The Elite Translation</div>
-          {/* wavey part */}
-          {/* <div class="custom-shape-divider-bottom-1671370168">
+export default function Header() {
+  return (
+    <>
+      <div
+        className="channelHeader"
+        style={{
+          background: `url(${headerImage}) "linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0.2) 30%,rgba(0, 0, 0, 0.4) 55%,rgba(0, 0, 0, 0.2) 90%,rgba(255, 255, 255, 0) 100%)"`, backgroundRepeat: "no-repeat", backgroundSize: "cover"
+        }}
+      >
+
+
+        <div className="channelName">
+
+          Classroom Of The Elite Fan Translations
+
+        </div>
+        {/* wavey part */}
+        {/* <div class="custom-shape-divider-bottom-1671370168">
           <svg
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +33,7 @@ export default function Header(){
             ></path>
           </svg>
           </div> */}
-        </div>
-      </>
-    );
+      </div>
+    </>
+  );
 } 

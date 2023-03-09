@@ -24,10 +24,18 @@
   border-radius: 10px;
 }
 
+.dark_mode_2 {
+  position: absolute;
+  top: 1.8%;
+  left: 72%;
+}
+
 .label-tab {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
+  /* flex-wrap: wr
+  
+  ap; */
 }
 
 .pageInput {
@@ -41,12 +49,24 @@
   display: flex;
   flex-direction: row;
 }
-
-.theme-btn {
-  margin: 10px;
+.bt1 {
   position: absolute;
-  top: 2.5%;
+  top: 50%;
+  left: 5%;
+  opacity: 0;
+}
+.bt2 {
+  position: absolute;
+  top: 55%;
   left: 70%;
+  opacity: 0;
+}
+.theme-btn {
+  width: 50px;
+  z-index: 200;
+  position: absolute;
+  top: 4%;
+  left: 72%;
 }
 
 .fullscreeen-btn {
@@ -56,16 +76,13 @@
   left: 24%;
 }
 
-
 .ful-btn {
-  background-color: #777779;
   border: none;
-  border-radius: 4px;
+  background-color: transparent;
   color: #ffffff;
   cursor: pointer;
-  padding: 8px;
+  padding: 2px;
 }
-
 
 .chapter-option {
   margin: 10px;
@@ -104,7 +121,7 @@
   width: 50%;
 }
 
-.scrollToTop{
+.scrollToTop {
   position: sticky;
   display: block;
   height: 20px;
@@ -119,9 +136,9 @@
   cursor: pointer;
 } */
 
-.scrollToTop-btn{
+.scrollToTop-btn {
   background-color: #77777900;
-  border:none;
+  border: none;
   color: rgb(108, 107, 107);
   cursor: pointer;
 }
@@ -150,11 +167,11 @@
   }
 
   .fullscreeen-btn {
-  margin: 10px;
-  position: absolute;
-  top: 3.5%;
-  left: 24%;
-}
+    margin: 10px;
+    position: absolute;
+    top: 3.5%;
+    left: 24%;
+  }
 
   .theme-btn {
     margin: 10px;
@@ -162,11 +179,9 @@
     top: 3.5%;
     left: 70%;
   }
-
 }
 
 @media screen and (max-width: 754px) {
-
   .reading-container {
     width: 100%;
   }
@@ -198,10 +213,10 @@
   }
 
   .fullscreeen-btn {
-  margin: 10px;
-  position: absolute;
-  top: 3.5%;
-  left: 24%;
+    margin: 10px;
+    position: absolute;
+    top: 3.5%;
+    left: 24%;
   }
 
   .theme-btn {
@@ -210,6 +225,4 @@
     top: 3.5%;
     left: 72%;
   }
-
-
 }
