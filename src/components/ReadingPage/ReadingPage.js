@@ -24,6 +24,8 @@ import "./DarkMode.css";
 import { ReactComponent as Moon } from "./Moon.svg";
 import { ReactComponent as Sun } from "./Sun.svg";
 
+import { RenderCurrentPageLabelProps } from '@react-pdf-viewer/page-navigation';
+
 export default function ReadingPage() {
   const search = useLocation().search;
 
@@ -39,7 +41,7 @@ export default function ReadingPage() {
   theme = new URLSearchParams(search).get("theme");
 
   const pageNavigationPluginInstance = pageNavigationPlugin();
-  const { jumpToPage, CurrentPageInput } =
+  const { jumpToPage, CurrentPageInput, CurrentPageLabel } =
     pageNavigationPluginInstance;
 
   const fullScreenPluginInstance = fullScreenPlugin({
@@ -87,10 +89,18 @@ export default function ReadingPage() {
   const changePDF = () => {
     if (pdfTheme == "light") { setpdfTheme("dark") }
     else { setpdfTheme("light") }
+    if (document.getElementById('currpage') != null) {
+      setPageNumber(document.getElementById('currpage').innerText)
+    }
   }
 
   return (
     <>
+      <CurrentPageLabel>
+        {(props: RenderCurrentPageLabelProps) => (
+          <span id='currpage' class="hidden">{`${props.currentPage}`}</span>
+        )}
+      </CurrentPageLabel>
       <div className="reading-container">
         <div className="label-tab">
           <div className='dark_mode_2'>
@@ -140,7 +150,9 @@ export default function ReadingPage() {
           <div
             className="pageInput"
           >
-            <CurrentPageInput /> /{totalPage}
+            <CurrentPageInput />
+            <div className="pageno">
+              /{totalPage}</div>
           </div>
 
           <div
