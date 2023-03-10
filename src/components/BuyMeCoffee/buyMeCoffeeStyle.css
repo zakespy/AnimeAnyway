@@ -1,17 +1,23 @@
-.coffee{
-    height: 100px;
-    width:85%;
-    background-color: rgb(71, 44, 44);
-    margin: 20px auto;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: azure;
+.coffee {
+  height: 55px;
+  width: 70%;
+  background-color: rgb(255, 221, 0);
+  margin: 20px auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.text{
-    padding-top: 30px;
-    color: azure;
+.text {
+  padding-top: 14px;
+  font-size: larger;
+  color: rgb(0, 0, 0);
 }
+
+/* @media only screen and (max-width: 773px) {
+  .coffee {
+    height: 90px;
+  }
+} */
