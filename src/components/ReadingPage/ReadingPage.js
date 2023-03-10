@@ -11,7 +11,9 @@ import {
   fullScreenPlugin
 } from "@react-pdf-viewer/full-screen";
 import "@react-pdf-viewer/full-screen/lib/styles/index.css";
-import { pageNavigationPlugin, RenderCurrentPageLabelProps } from '@react-pdf-viewer/page-navigation';
+import {
+  pageNavigationPlugin
+} from "@react-pdf-viewer/page-navigation";
 import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 import { themePlugin } from "@react-pdf-viewer/theme";
 import React, { useEffect, useRef, useState } from "react";
@@ -79,6 +81,7 @@ export default function ReadingPage(props) {
     // console.log(zoomIndex)
   }, [])
 
+
   const darkPath = translatedVolume[volume_index].darkPath;
   const lightPath = translatedVolume[volume_index].path;
 
@@ -96,11 +99,9 @@ export default function ReadingPage(props) {
     }
     // set el height and width etc.
   }, [pdfButton])
-  var currentPage = 0;
   const changePDF = () => {
-    currentPage = document.getElementById("currentpage").innerText;
-    console.log(currentPage)
-    setPageNumber(currentPage)
+    console.log(CurrentPageInput.value)
+
     if (pdfButton == "light") { setPdfButton("dark") }
     else { setPdfButton("light") }
     // pdfButton?path=lightPath:path=darkPath
@@ -108,13 +109,6 @@ export default function ReadingPage(props) {
 
   return (
     <>
-      <div className="hidden">
-        <CurrentPageLabel>
-          {(props: RenderCurrentPageLabelProps) => (
-            <div id="currentpage">{`${props.currentPage}`}</div>
-          )}
-        </CurrentPageLabel>
-      </div>
       <div className="reading-container">
         <div className="label-tab">
           <div className='dark_mode_2'>
@@ -180,7 +174,7 @@ export default function ReadingPage(props) {
               switchButton(false);
             }}
           >
-            <CurrentPageInput /><div className="pageno">/{totalPage}</div>
+            <CurrentPageInput id="pagename" /><div className="pageno">/{totalPage}</div>
           </div>
 
           <div
