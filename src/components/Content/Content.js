@@ -44,19 +44,7 @@ export default function Content() {
           </div>
           <div className="info-container">
             <strong>
-              Year 2 Volume 9 is translated upto chapter 2, and further chapters are under translation. Subscribe to the channel to stay updated.
-              <br /> <br />
-              <a href="https://youtu.be/QuanaclRcy8" className="new-link" target="_blank">
-                New Illustration for Year 2 Volume 9 Revealed. Click to watch
-              </a>
-              <br /> <br />
-              <a href="https://youtu.be/ENcANeWv5GM" className="new-link" target="_blank">
-                2nd Illustration for Year 2 Volume 9 Revealed. Click to watch
-              </a>
-              <br /> <br />
-              <a href="https://www.youtube.com/watch?v=IrAEI9LuGKo" className="new-link" target="_blank">
-                Year 2 Volume 9 Synopsis Revealed. Click to watch
-              </a>
+              Year 2 Volume 9 is translated upto chapter 4, full translation will be done by 20th March. Subscribe to the channel to stay updated.
             </strong>
           </div>
         </div>
@@ -67,7 +55,7 @@ export default function Content() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <h1 className="previousVolume">Previous Volumes</h1>
+              <h2 className="previousVolume">Previous Classroom of the Elite Volumes</h2>
             </AccordionSummary>
             <AccordionDetails>
               <div className="link-container">

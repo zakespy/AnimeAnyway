@@ -15,9 +15,9 @@ export default function Header() {
 
 
         <div className="channelName">
-
-          Classroom Of The Elite Fan Translations
-
+          <h1>
+            Classroom Of The Elite Fan Translations
+          </h1>
         </div>
         {/* wavey part */}
         {/* <div class="custom-shape-divider-bottom-1671370168">
