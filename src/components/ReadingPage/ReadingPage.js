@@ -41,9 +41,8 @@ export default function ReadingPage(props) {
   theme = new URLSearchParams(search).get("theme");
 
   const pageNavigationPluginInstance = pageNavigationPlugin();
-  const { jumpToPage, CurrentPageInput, CurrentPageLabel } =
+  const { jumpToPage, CurrentPageInput } =
     pageNavigationPluginInstance;
-
 
   const fullScreenPluginInstance = fullScreenPlugin({
     // Zoom to fit the screen after entering and exiting the full screen mode
@@ -55,7 +54,6 @@ export default function ReadingPage(props) {
     },
   },);
   const { EnterFullScreen } = fullScreenPluginInstance;
-
 
   const themePluginInstance = themePlugin();
   const { SwitchThemeButton } = themePluginInstance;
@@ -100,8 +98,6 @@ export default function ReadingPage(props) {
     // set el height and width etc.
   }, [pdfButton])
   const changePDF = () => {
-    console.log(CurrentPageInput.value)
-
     if (pdfButton == "light") { setPdfButton("dark") }
     else { setPdfButton("light") }
     // pdfButton?path=lightPath:path=darkPath
@@ -117,7 +113,7 @@ export default function ReadingPage(props) {
               type='checkbox'
               id='darkmode-toggle'
             />
-            <label className='dark_mode_label' htmlFor='darkmode-toggle'>
+            <label className='dark_mode_label' for='darkmode-toggle'>
               <Sun />
               <Moon />
             </label>
@@ -174,7 +170,7 @@ export default function ReadingPage(props) {
               switchButton(false);
             }}
           >
-            <CurrentPageInput id="pagename" /><div className="pageno">/{totalPage}</div>
+            <CurrentPageInput /> /{totalPage}
           </div>
 
           <div
@@ -201,7 +197,8 @@ export default function ReadingPage(props) {
                           setPageNumber(e.pageNo);
                           setChapterName(e.name);
                           jumpToPage(e.pageNo);
-
+                          // jumpToPage(pageNumber);
+                          // console.log(e.name + e.pageNo);
                         }}
                       >
                         {e.name}
@@ -237,7 +234,7 @@ export default function ReadingPage(props) {
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
-          <div className="scrollToTop">
+          <div className="scrollToTop" onClick={() => { jumpToPage(0) }}>
             {/* <button className="scrollToTop-btn"onClick={()=>{jumpToPage(0)}}> */}
             <button className="scrollToTop-btn" onClick={() => { window.scrollTo(0, 0) }}>
               <NorthIcon />
