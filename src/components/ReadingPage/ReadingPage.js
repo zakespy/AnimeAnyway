@@ -11,9 +11,7 @@ import {
   fullScreenPlugin
 } from "@react-pdf-viewer/full-screen";
 import "@react-pdf-viewer/full-screen/lib/styles/index.css";
-import {
-  pageNavigationPlugin
-} from "@react-pdf-viewer/page-navigation";
+import { pageNavigationPlugin, RenderCurrentPageLabelProps } from '@react-pdf-viewer/page-navigation';
 import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 import { themePlugin } from "@react-pdf-viewer/theme";
 import React, { useEffect, useRef, useState } from "react";
@@ -41,8 +39,9 @@ export default function ReadingPage(props) {
   theme = new URLSearchParams(search).get("theme");
 
   const pageNavigationPluginInstance = pageNavigationPlugin();
-  const { jumpToPage, CurrentPageInput } =
+  const { jumpToPage, CurrentPageInput, CurrentPageLabel } =
     pageNavigationPluginInstance;
+
 
   const fullScreenPluginInstance = fullScreenPlugin({
     // Zoom to fit the screen after entering and exiting the full screen mode
@@ -54,6 +53,7 @@ export default function ReadingPage(props) {
     },
   },);
   const { EnterFullScreen } = fullScreenPluginInstance;
+
 
   const themePluginInstance = themePlugin();
   const { SwitchThemeButton } = themePluginInstance;
@@ -79,7 +79,6 @@ export default function ReadingPage(props) {
     // console.log(zoomIndex)
   }, [])
 
-
   const darkPath = translatedVolume[volume_index].darkPath;
   const lightPath = translatedVolume[volume_index].path;
 
@@ -97,7 +96,11 @@ export default function ReadingPage(props) {
     }
     // set el height and width etc.
   }, [pdfButton])
+  var currentPage = 0;
   const changePDF = () => {
+    currentPage = document.getElementById("currentpage").innerText;
+    console.log(currentPage)
+    setPageNumber(currentPage)
     if (pdfButton == "light") { setPdfButton("dark") }
     else { setPdfButton("light") }
     // pdfButton?path=lightPath:path=darkPath
@@ -105,6 +108,13 @@ export default function ReadingPage(props) {
 
   return (
     <>
+      <div className="hidden">
+        <CurrentPageLabel>
+          {(props: RenderCurrentPageLabelProps) => (
+            <div id="currentpage">{`${props.currentPage}`}</div>
+          )}
+        </CurrentPageLabel>
+      </div>
       <div className="reading-container">
         <div className="label-tab">
           <div className='dark_mode_2'>
@@ -113,7 +123,7 @@ export default function ReadingPage(props) {
               type='checkbox'
               id='darkmode-toggle'
             />
-            <label className='dark_mode_label' for='darkmode-toggle'>
+            <label className='dark_mode_label' htmlFor='darkmode-toggle'>
               <Sun />
               <Moon />
             </label>
@@ -170,7 +180,7 @@ export default function ReadingPage(props) {
               switchButton(false);
             }}
           >
-            <CurrentPageInput /> /{totalPage}
+            <CurrentPageInput /><div className="pageno">/{totalPage}</div>
           </div>
 
           <div
@@ -197,8 +207,7 @@ export default function ReadingPage(props) {
                           setPageNumber(e.pageNo);
                           setChapterName(e.name);
                           jumpToPage(e.pageNo);
-                          // jumpToPage(pageNumber);
-                          // console.log(e.name + e.pageNo);
+
                         }}
                       >
                         {e.name}
@@ -234,7 +243,7 @@ export default function ReadingPage(props) {
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
-          <div className="scrollToTop" onClick={() => { jumpToPage(0) }}>
+          <div className="scrollToTop">
             {/* <button className="scrollToTop-btn"onClick={()=>{jumpToPage(0)}}> */}
             <button className="scrollToTop-btn" onClick={() => { window.scrollTo(0, 0) }}>
               <NorthIcon />

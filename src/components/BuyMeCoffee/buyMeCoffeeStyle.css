@@ -16,8 +16,8 @@
   color: rgb(0, 0, 0);
 }
 
-/* @media only screen and (max-width: 773px) {
+@media only screen and (min-width: 600px) {
   .coffee {
-    height: 90px;
+    width: 60%;
   }
-} */
+}
