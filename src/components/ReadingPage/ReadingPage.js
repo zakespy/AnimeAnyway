@@ -24,9 +24,7 @@ import "./DarkMode.css";
 import { ReactComponent as Moon } from "./Moon.svg";
 import { ReactComponent as Sun } from "./Sun.svg";
 
-
-export default function ReadingPage(props) {
-  const location = useLocation();
+export default function ReadingPage() {
   const search = useLocation().search;
 
   var zoomIndex = 1.8
@@ -45,7 +43,6 @@ export default function ReadingPage(props) {
     pageNavigationPluginInstance;
 
   const fullScreenPluginInstance = fullScreenPlugin({
-    // Zoom to fit the screen after entering and exiting the full screen mode
     onEnterFullScreen: (zoom) => {
       zoom(SpecialZoomLevel.zoom = zoomIndex);
     },
@@ -59,48 +56,37 @@ export default function ReadingPage(props) {
   const { SwitchThemeButton } = themePluginInstance;
 
   const [pageNumber, setPageNumber] = useState(0);
-  // const [currentPageNo, setCurrentPageNo] = useState(pageNumber);
   const [chapters, setChapters] = useState([])
   const [totalPage, setTotalPage] = useState()
   const [chapterName, setChapterName] = useState("")
   const [currentTheme, setCurrentTheme] = React.useState(theme);
-  const [togglebutton, setToggleButton] = React.useState(true);
-  const [pdfButton, setPdfButton] = React.useState(theme);
+  const [pdfTheme, setpdfTheme] = React.useState(theme);
   const themeContext = { currentTheme, setCurrentTheme };
 
   useEffect(() => {
     setChapters(translatedVolume[volume_index].chapter);
-    // console.log(translatedVolume[volume_index].chapter[0]);
     setChapterName(translatedVolume[volume_index].chapter[0].name);
     setTotalPage(translatedVolume[volume_index].totalPage);
     setPageNumber(translatedVolume[volume_index].chapter[0].pageNo);
     window.scrollTo(0, 0);
-    // console.log(newWidth)
-    // console.log(zoomIndex)
   }, [])
-
 
   const darkPath = translatedVolume[volume_index].darkPath;
   const lightPath = translatedVolume[volume_index].path;
 
   let path
-  pdfButton == "light" ? path = lightPath : path = darkPath
+  pdfTheme == "light" ? path = lightPath : path = darkPath
 
-  const switchButton = (bool) => {
-    setToggleButton(bool);
-  }
   useEffect(() => {
-    if (pdfButton == "dark") {
+    if (pdfTheme == "dark") {
       document.getElementById('darkmode-toggle').checked = true;
     } else {
       document.getElementById('darkmode-toggle').checked = false;
     }
-    // set el height and width etc.
-  }, [pdfButton])
+  }, [pdfTheme])
   const changePDF = () => {
-    if (pdfButton == "light") { setPdfButton("dark") }
-    else { setPdfButton("light") }
-    // pdfButton?path=lightPath:path=darkPath
+    if (pdfTheme == "light") { setpdfTheme("dark") }
+    else { setpdfTheme("light") }
   }
 
   return (
@@ -121,39 +107,27 @@ export default function ReadingPage(props) {
           <div className="theme-btn" onClick={() => {
             changePDF()
           }}>
-
             <ThemeContext.Provider value={themeContext}>
               <div className="switchthemebtn">
                 <div className="bt1">
-
                   <SwitchThemeButton />
                 </div>
                 <div className="bt2">
-
                   <SwitchThemeButton />
                 </div>
-
               </div>
-
             </ThemeContext.Provider>
           </div>
 
           <div
             className="fullscreeen-btn"
-            onClick={() => {
-              switchButton(true);
-            }}
           >
             <EnterFullScreen>
               {(props) => (
-                // onEnterFullScreen =>(zoom)=>{
-                //   zoom(SpecialZoomLevel.PageWidth);
-                // },
                 <>
-
                   <button
                     className="ful-btn"
-                    // eslint-disable-next-line no-unused-expressions
+
                     onClick={props.onClick}
                   >
                     <img src="https://img.icons8.com/windows/32/null/fit-to-width--v1.png" />
@@ -163,21 +137,14 @@ export default function ReadingPage(props) {
               )}
             </EnterFullScreen>
           </div>
-
           <div
             className="pageInput"
-            onClick={() => {
-              switchButton(false);
-            }}
           >
             <CurrentPageInput /> /{totalPage}
           </div>
 
           <div
             className="chapter-option"
-            onClick={() => {
-              switchButton(false);
-            }}
           >
             <Accordion>
               <AccordionSummary
@@ -197,8 +164,6 @@ export default function ReadingPage(props) {
                           setPageNumber(e.pageNo);
                           setChapterName(e.name);
                           jumpToPage(e.pageNo);
-                          // jumpToPage(pageNumber);
-                          // console.log(e.name + e.pageNo);
                         }}
                       >
                         {e.name}
@@ -222,20 +187,16 @@ export default function ReadingPage(props) {
               scrollMode=""
               defaultScale={SpecialZoomLevel.PageFit}
               theme={currentTheme}
-
               plugins={
                 (
                   [themePluginInstance],
                   [fullScreenPluginInstance, pageNavigationPluginInstance]
-                  // [pageNavigationPluginInstance]
                 )
               }
-
               ViewMode={ViewMode.SinglePage}
             />
           </Worker>
           <div className="scrollToTop" onClick={() => { jumpToPage(0) }}>
-            {/* <button className="scrollToTop-btn"onClick={()=>{jumpToPage(0)}}> */}
             <button className="scrollToTop-btn" onClick={() => { window.scrollTo(0, 0) }}>
               <NorthIcon />
             </button>
