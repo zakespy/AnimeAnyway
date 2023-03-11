@@ -20,8 +20,8 @@
   backdrop-filter: blur(7px);
   box-shadow: 1px 1px 7px grey;
 }
-
 .headerName {
+  padding-top: 10px;
   margin: auto;
   text-align: center;
   font-family: "Hind Siliguri", sans-serif;
@@ -94,6 +94,7 @@
   padding: 20px;
   font-size: 20px;
   color: rgb(48, 47, 47);
+  max-height: 500px;
 }
 
 .new-link {
@@ -139,7 +140,7 @@
   .main-container {
     flex-direction: column;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
   }
 
   .link-container {
