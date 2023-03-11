@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import headerImage from "../../cl2-header.png";
 import './HeaderStyle.css';
 
 export default function Header() {
@@ -9,10 +8,13 @@ export default function Header() {
       <div
         className="channelHeader"
         style={{
-          background: `url(${headerImage}) "linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,rgba(0, 0, 0, 0.2) 30%,rgba(0, 0, 0, 0.4) 55%,rgba(0, 0, 0, 0.2) 90%,rgba(255, 255, 255, 0) 100%)"`, backgroundRepeat: "no-repeat", backgroundSize: "cover"
+          backgroundSize: "cover"
         }}
       >
 
+        {/* <Link to="/" className="homebtn">
+          <img src="https://img.icons8.com/sf-regular-filled/48/FFFFFF/home-page.png" />
+        </Link> */}
 
         <div className="channelName">
           <h1>
