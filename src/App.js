@@ -7,30 +7,19 @@ import Content from './components/Content/Content.js';
 import DownloadPage from './components/DownloadPage/DownloadPage.js';
 import Footer from './components/Footer/Footer.js';
 import ReadingPage from './components/ReadingPage/ReadingPage';
-import AdContainer from './components/AdContainer/AdContainer';
-import VolumeCard from './components/VolumeCard/VolumeCard';
-// import PdfViewerComponent from './components/PdfViewerComponent';
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Header/>
-        {/* <div className="ads" style={{height:"100px", width:"500px"}}>
-          <AdContainer />
-        </div> */}
+        <Header />
         <Routes>
           <Route path="/" element={<Content />} />
           <Route path="/download" element={<DownloadPage />} />
           <Route path="/read" element={<ReadingPage />} />
         </Routes>
-
-        {/* <ReadingPage document={"Volume 0.pdf"}/> */} 
-       
-        {/* <VolumeCard/> */}
-        {/* <ReadingPage/> */}
-        <BuyMeCoffee/>
+        <BuyMeCoffee />
         <Footer />
       </BrowserRouter>
     </>

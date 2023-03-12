@@ -1,27 +1,15 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import { translatedVolume, volumeData } from '../../constants/volumeObj.js';
-// import AdContainer from "../AdContainer/AdContainer.js";
-
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
-import Typography from "@mui/material/Typography";
+import React from "react";
+import { translatedVolume, volumeData } from '../../constants/volumeObj.js';
 import VolumeCard from "../VolumeCard/VolumeCard.js";
-
 import './ContentStyle.css';
 
 export default function Content() {
-
-  const [volumes, setvolumes] = useState(volumeData.slice(0).reverse());
-  const [transVolumes, setTransVolumes] = useState(translatedVolume.slice(0).reverse());
-  // console.log(volumes)
-  // const [volumes, setvolumes] = useState({
-  //     vol1: "",
-  //     vol2: "",
-  //     vol3: ""
-  // })
+  const volumes = volumeData.slice(0).reverse();
+  const transVolumes = translatedVolume.slice(0).reverse();
 
   return (
     <>
@@ -85,7 +73,8 @@ export default function Content() {
           </Accordion>
         </div>
       </div>
-      <div></div>
+      <div>
+      </div>
     </>
   );
 }

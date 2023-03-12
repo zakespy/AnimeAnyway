@@ -13,7 +13,6 @@ export default function Footer() {
           <div className="channel-info">
             <h1>Anime Anyway</h1>
             <h3>Channel for all Classroom of the elite novel translations</h3>
-            {/* <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nisi voluptatum nulla eligendi doloribus recusandae voluptates minima incidunt ducimus quo exercitationem, corrupti laboriosam illo libero, sequi, quae optio deleniti consequatur?</h3> */}
           </div>
           <div className="creator-info">
             <div className="channel-link">
@@ -21,6 +20,7 @@ export default function Footer() {
               <a
                 href="https://www.instagram.com/anime_anyway_/?igshid=1ch5mp9tspotz"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="links">
                   <h4>Instagram</h4>
@@ -30,13 +30,14 @@ export default function Footer() {
               <a
                 href="https://www.youtube.com/@ANIMEANYWAY/about"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="links">
                   <h4>Youtube</h4>
                   <YouTubeIcon className="icons" />
                 </div>
               </a>
-              <a href="https://t.me/animeanyway" target="_blank">
+              <a href="https://t.me/animeanyway" target="_blank" rel="noreferrer">
                 <div className="links">
                   <h4>Telegram</h4>
                   <TelegramIcon className="icons" />
@@ -54,15 +55,12 @@ export default function Footer() {
                   marginTop: "0px",
                 }}
               >
-                Asplay
+                Evoliq
               </h3>
-              {/* <h2 style={{ fontSize: "20px", marginTop: "-20px" }}>
-                Developer Company
-              </h2> */}
               <h4 style={{ fontSize: "20px", marginTop: "-35px" }}>
                 Developer Contact
               </h4>
-              <h4
+              {/* <h4
                 style={{
                   fontSize: "20px",
                   marginTop: "-10px",
@@ -71,35 +69,21 @@ export default function Footer() {
                 }}
               >
                 services@asplay.tech
-              </h4>
+              </h4> */}
               <a
-                href="https://www.instagram.com/_asplay_/?next=%2F"
+                href="https://www.instagram.com/_evoliq_/?next=%2F"
                 target="_blank"
+                rel="noreferrer"
               >
                 <div className="developer-insta-links">
-                  <h4>_asplay_</h4>
+                  <h4>_evoliq_</h4>
                   <InstagramIcon className="icons" />
                 </div>
               </a>
             </div>
           </div>
         </div>
-        {/* <div className="lastImage"></div> */}
-        <img src={banner}  alt="banner"></img>
-        {/* wavey part */}
-        {/* <div class="custom-shape-divider-top-1671373515">
-            <svg
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                class="shape-fill"
-              ></path>
-            </svg>
-          </div> */}
+        <img src={banner} alt="banner"></img>
       </div>
     </>
   );

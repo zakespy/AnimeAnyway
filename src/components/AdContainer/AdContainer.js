@@ -1,5 +1,5 @@
-import React from 'react'
-import AdSense from 'react-adsense'; 
+import React from 'react';
+import AdSense from 'react-adsense';
 // import AdSense from 'react-adsense-ads';
 
 
@@ -11,12 +11,12 @@ export default function AdContainer() {
             <div>
 
                 <AdSense.Google
-                client='ca-pub-8762191555564843'
-                slot='1641772231'
-                style={{ display: 'block' }}
-                layout='in-article'
-                format='fluid'
-            />
+                    client='ca-pub-8762191555564843'
+                    slot='1641772231'
+                    style={{ display: 'block' }}
+                    layout='in-article'
+                    format='fluid'
+                />
 
                 {/* // auto full width responsive ads */}
                 {/* <AdSense.Google
@@ -28,7 +28,7 @@ export default function AdContainer() {
                 layoutKey='-gw-1+2a-9x+5c'
             /> */}
 
-{/* 
+                {/* 
                 <AdSense.Google
                     client='ca-pub-8762191555564843'
                     slot='1641772231'

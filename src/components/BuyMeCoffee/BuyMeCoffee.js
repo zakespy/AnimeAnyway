@@ -6,7 +6,7 @@ export default function BuyMeCoffee() {
     <>
       <div className="coffee">
         <strong>
-          <a href="https://www.buymeacoffee.com/animeanyway11" target="_blank">
+          <a href="https://www.buymeacoffee.com/animeanyway11" target="_blank" rel="noreferrer">
             <p className='text'>Buy Me A Coffee</p>
           </a>
         </strong>

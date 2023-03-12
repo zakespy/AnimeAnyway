@@ -1,19 +1,18 @@
 import DownloadIcon from '@mui/icons-material/Download';
-import React,{useEffect} from "react";
-import { useLocation, BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { translatedVolume } from "../../constants/volumeObj.js";
 
 import './DownloadPage.css';
 
 export default function Content() {
-  useEffect(()=>{
-    window.scrollTo(0,400);
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 400);
+  }, [])
 
   const search = useLocation().search;
   var volume_index = 0;
   volume_index = new URLSearchParams(search).get("volume");
-  const path = '../../assets/file/Volume O.pdf';
 
 
   const pdfDownload = () => {
@@ -26,7 +25,7 @@ export default function Content() {
           // Setting various property values
           let alink = document.createElement("a");
           // alink.href = translatedVolume[volume_index].driveURL;
-          alink.href = fileURL; 
+          alink.href = fileURL;
           alink.download = `${translatedVolume[volume_index].name}.pdf`;
           alink.click();
         });
@@ -43,7 +42,7 @@ export default function Content() {
           const fileURL = window.URL.createObjectURL(blob);
           // Setting various property values
           let alink = document.createElement("a");
-          alink.href = fileURL;  
+          alink.href = fileURL;
           alink.download = `${translatedVolume[volume_index].name}.epub`;
           alink.click();
         });
