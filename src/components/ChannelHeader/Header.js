@@ -19,6 +19,7 @@ export default function Header() {
         <div className="homebtn"><img src="https://img.icons8.com/material-sharp/24/null/home-page.png" alt="homebtn" /></div>
       </Link>
       <br />
+      <br />
     </>
   );
 } 
