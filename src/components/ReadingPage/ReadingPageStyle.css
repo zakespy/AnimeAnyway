@@ -256,6 +256,11 @@
   opacity: 0;
 }
 
+.maindiv > h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 27px;
+}
 h2 {
   font-weight: normal;
   font-size: inherit;
