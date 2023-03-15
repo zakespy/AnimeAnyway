@@ -293,7 +293,7 @@ export const translatedVolume = [
     name: "Year Two Volume 9",
     path: '../../assets/file/Year Two Volume 9.pdf',
     darkPath: '../../assets/file/Year Two Volume 9(dark).pdf',
-    totalPage: 220,
+    totalPage: 315,
     chapter: [
       {
         name: "Cover",
@@ -301,23 +301,31 @@ export const translatedVolume = [
       },
       {
         name: "Prologue",
-        pageNo: 8,
+        pageNo: 9,
       },
       {
         name: "Chapter 1",
-        pageNo: 11,
+        pageNo: 12,
       },
       {
         name: "Chapter 2",
-        pageNo: 66,
+        pageNo: 67,
       },
       {
         name: "Chapter 3",
-        pageNo: 119,
+        pageNo: 121,
       },
       {
         name: "Chapter 4",
-        pageNo: 180,
+        pageNo: 183,
+      },
+      {
+        name: "Chapter 5",
+        pageNo: 219,
+      },
+      {
+        name: "Chapter 6",
+        pageNo: 273,
       },
     ],
   },
