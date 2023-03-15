@@ -32,7 +32,7 @@ export default function Content() {
           </div>
           <div className="info-container">
             <strong>
-              Year 2 Volume 9 is translated upto chapter 4, full translation will be done by 20th March. Subscribe to the Youtube channel to stay updated.
+              Year 2 Volume 9 is translated upto chapter 6, full translation will be done by 18th March. Subscribe to the Youtube channel to stay updated.
             </strong>
           </div>
         </div>
