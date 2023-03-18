@@ -313,6 +313,10 @@ export const translatedVolume = [
         pageNo: 0
       },
       {
+        name: "index",
+        pageNo: 7
+      },
+      {
         name: "Prologue",
         pageNo: 9,
       },
