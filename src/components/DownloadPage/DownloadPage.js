@@ -39,7 +39,7 @@ export default function Content() {
                       return;
                     }
                     loaded += progressEvent.value.byteLength;
-                    percentage = (Math.round(loaded / pdf_len * 100));
+                    var percentage = (Math.round(loaded / pdf_len * 100));
                     setpdfprogress(percentage)
                     controller.enqueue(progressEvent.value);
                     read();
@@ -92,7 +92,7 @@ export default function Content() {
                       return;
                     }
                     loaded += progressEvent.value.byteLength;
-                    percentage = (Math.round(loaded / epub_len * 100));
+                    var percentage = (Math.round(loaded / epub_len * 100));
                     console.log(percentage)
                     setepubprogress(percentage)
                     controller.enqueue(progressEvent.value);

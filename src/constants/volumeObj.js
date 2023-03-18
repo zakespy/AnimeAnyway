@@ -257,6 +257,10 @@ export const translatedVolume = [
         pageNo: 0
       },
       {
+        name: "Index",
+        pageNo: 7
+      },
+      {
         name: "Prologue",
         pageNo: 8,
       },
