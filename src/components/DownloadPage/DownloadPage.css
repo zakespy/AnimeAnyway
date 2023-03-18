@@ -18,6 +18,10 @@
   color: rgb(49, 50, 51);
   text-align: center;
 }
+#pdf_percent,
+#epub_percent {
+  display: none;
+}
 
 .download-container > h1 {
   font-weight: normal;
