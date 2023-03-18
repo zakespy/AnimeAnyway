@@ -40,7 +40,7 @@ export default function Content() {
                       return;
                     }
                     loaded += progressEvent.value.byteLength;
-                    setpdfprogress(Math.round(loaded / content_len * 100));
+                    console.log(Math.round(loaded / content_len * 100));
                     controller.enqueue(progressEvent.value);
                     read();
                   })
