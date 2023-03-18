@@ -84,16 +84,16 @@ export default function Content() {
               read();
               function read() {
                 reader.read()
-                  .then((progressEvent) => {
-                    if (progressEvent.done) {
+                  .then((progressEvent2) => {
+                    if (progressEvent2.done) {
                       controller.close();
                       setepubprogress(0)
                       return;
                     }
-                    loaded2 += progressEvent.value.byteLength;
+                    loaded2 += progressEvent2.value.byteLength;
                     var percentage2 = (Math.round(loaded2 / epub_len * 100));
                     setepubprogress(percentage2)
-                    controller.enqueue(progressEvent.value);
+                    controller.enqueue(progressEvent2.value);
                     read();
                   })
               }
