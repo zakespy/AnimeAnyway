@@ -55,7 +55,7 @@ export default function Content() {
   return (
     <>
       <div className="download-container">
-        Download {translatedVolume[volume_index].name} of COTE
+        <h1>Download {translatedVolume[volume_index].name} of Classroom Of The ELite</h1>
         {/* <a
             // href={path}
             href={`../../assets/file/${translatedVolume[volume_index].name}.pdf`}
