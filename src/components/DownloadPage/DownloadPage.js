@@ -23,7 +23,7 @@ export default function Content() {
     const pdf_len = translatedVolume[volume_index].pdf_size * 1024;
     fetch(`/assets/file/${translatedVolume[volume_index].name}.pdf`).then(
       response => {
-        var loaded = 0;
+        var loaded1 = 0;
         return new Response(
           new ReadableStream({
             start(controller) {
@@ -37,9 +37,9 @@ export default function Content() {
                       setpdfprogress(0)
                       return;
                     }
-                    loaded += progressEvent.value.byteLength;
-                    var percentage = (Math.round(loaded / pdf_len * 100));
-                    setpdfprogress(percentage)
+                    loaded1 += progressEvent.value.byteLength;
+                    var percentage1 = (Math.round(loaded1 / pdf_len * 100));
+                    setpdfprogress(percentage1)
                     controller.enqueue(progressEvent.value);
                     read();
                   })
@@ -76,7 +76,7 @@ export default function Content() {
     const epub_len = translatedVolume[volume_index].epub_size * 1024;
     fetch(`/assets/file/${translatedVolume[volume_index].name}.epub`).then(
       response => {
-        var loaded = 0;
+        var loaded2 = 0;
         return new Response(
           new ReadableStream({
             start(controller) {
@@ -90,9 +90,9 @@ export default function Content() {
                       setepubprogress(0)
                       return;
                     }
-                    loaded += progressEvent.value.byteLength;
-                    var percentage = (Math.round(loaded / epub_len * 100));
-                    setepubprogress(percentage)
+                    loaded2 += progressEvent.value.byteLength;
+                    var percentage2 = (Math.round(loaded2 / epub_len * 100));
+                    setepubprogress(percentage2)
                     controller.enqueue(progressEvent.value);
                     read();
                   })

@@ -135,7 +135,6 @@ export default function ReadingPage() {
                     onClick={props.onClick}
                   >
                     <img src="https://img.icons8.com/windows/32/null/fit-to-width--v1.png" alt="full screen" />
-                    {/* Enter fullscreen */}
                   </button>
                 </>
               )}
