@@ -14,6 +14,7 @@ export default function Content() {
 
   const [pdfprogress, setpdfprogress] = useState(0);
   const [epubprogress, setepubprogress] = useState(0);
+
   const pdfDownload = () => {
     const pdf = document.getElementById("pdf-btn");
     pdf.onClick = () => { return }
@@ -21,11 +22,10 @@ export default function Content() {
     pdf.style.color = "black";
     pdf.style.border = "none";
     pdf.innerText = "Downloading, " + pdfprogress + "%";
-
+    const pdf_len = translatedVolume[volume_index].pdf_size * 1024;
     fetch(`/assets/file/${translatedVolume[volume_index].name}.pdf`).then(
       response => {
         console.log(response)
-        const content_len = response.headers.get('content-length')
         var loaded = 0;
         return new Response(
           new ReadableStream({
@@ -40,7 +40,7 @@ export default function Content() {
                       return;
                     }
                     loaded += progressEvent.value.byteLength;
-                    console.log(Math.round(loaded / content_len * 100));
+                    console.log(Math.round(loaded / pdf_len * 100));
                     controller.enqueue(progressEvent.value);
                     read();
                   })

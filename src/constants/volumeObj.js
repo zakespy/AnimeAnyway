@@ -196,6 +196,8 @@ export const translatedVolume = [
     name: "Year 2 Volume 8",
     path: '../../assets/file/Year 2 Volume 8.pdf',
     darkPath: '../../assets/file/Year 2 Volume 8.pdf',
+    pdf_size: 3599,
+    epub_size: 1948,
     totalPage: 260,
     chapter: [
       {
@@ -292,6 +294,8 @@ export const translatedVolume = [
     name: "Year 2 Volume 9",
     path: '../../assets/file/Year 2 Volume 9.pdf',
     darkPath: '../../assets/file/Year 2 Volume 9(dark).pdf',
+    pdf_size: 33296,
+    epub_size: 35109,
     totalPage: 315,
     chapter: [
       {
