@@ -90,8 +90,8 @@ export const translatedVolume = [
     volumeNumber: 18,
     image: require("../assets/images/Year_Two_Volume_6.jpg"),
     name: "Year 2 Volume 6",
-    path: '../../assets/file/Year Two Volume 6.pdf',
-    darkPath: '../../assets/file/Year Two Volume 6.pdf',
+    path: '../../assets/file/Year 2 Volume 6.pdf',
+    darkPath: '../../assets/file/Year 2 Volume 6.pdf',
     totalPage: 285,
     chapter: [
       {
@@ -140,8 +140,8 @@ export const translatedVolume = [
     volumeNumber: 19,
     image: require("../assets/images/Year_Two_Volume_7.jpg"),
     name: "Year 2 Volume 7",
-    path: '../../assets/file/Year Two Volume 7.pdf',
-    darkPath: '../../assets/file/Year Two Volume 7.pdf',
+    path: '../../assets/file/Year 2 Volume 7.pdf',
+    darkPath: '../../assets/file/Year 2 Volume 7.pdf',
     totalPage: 294,
     chapter: [
       {
@@ -194,8 +194,8 @@ export const translatedVolume = [
     volumeNumber: 20,
     image: require("../assets/images/Year_Two_Volume_8.jpg"),
     name: "Year 2 Volume 8",
-    path: '../../assets/file/Year Two Volume 8.pdf',
-    darkPath: '../../assets/file/Year Two Volume 8.pdf',
+    path: '../../assets/file/Year 2 Volume 8.pdf',
+    darkPath: '../../assets/file/Year 2 Volume 8.pdf',
     totalPage: 260,
     chapter: [
       {
@@ -290,8 +290,8 @@ export const translatedVolume = [
     volumeNumber: 22,
     image: require("../assets/images/Year_Two_Volume_9.jpg"),
     name: "Year 2 Volume 9",
-    path: '../../assets/file/Year Two Volume 9.pdf',
-    darkPath: '../../assets/file/Year Two Volume 9(dark).pdf',
+    path: '../../assets/file/Year 2 Volume 9.pdf',
+    darkPath: '../../assets/file/Year 2 Volume 9(dark).pdf',
     totalPage: 315,
     chapter: [
       {
