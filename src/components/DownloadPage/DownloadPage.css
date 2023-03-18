@@ -3,9 +3,9 @@
   width: 85%;
   background-color: rgba(255, 255, 255, 0.1);
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 2rem 0;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding: 1.5rem 0;
   border-radius: 1rem;
   font-size: 1.75rem;
   font-weight: 500;
@@ -16,12 +16,14 @@
   backdrop-filter: blur(7px);
   box-shadow: 1px 1px 7px grey;
   color: rgb(49, 50, 51);
+  text-align: center;
 }
 
 .download-container > h1 {
   font-weight: normal;
-  font-size: 25px;
+  font-size: 27px;
   padding: 0 3rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .download-button {
@@ -35,7 +37,7 @@
   color: white;
   border-radius: 10px;
   /* background-color: rgb(210, 0, 0); */
-  background-color: rgba(240, 106, 73, 0.9);
+  background-color: rgba(255, 101, 101, 0.9);
   border: 1px solid black;
 }
 a {
@@ -44,36 +46,23 @@ a {
 
 @media screen and (max-width: 446px) {
   .download-container {
-    height: fit-content;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    padding: 2rem 1rem;
-    border-radius: 1rem;
+    width: 80%;
+    padding: 1rem 1rem;
     font-size: 1.5rem;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(7px);
-    box-shadow: 1px 1px 7px grey;
-    color: rgb(49, 50, 51);
   }
 
   .download-button {
-    margin: 2rem auto 0;
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
-    /* background-color: rgb(210, 0, 0); */
-    background-color: rgba(255, 101, 101, 0.9);
-    border: 1px solid black;
+    margin: 1.2rem auto 1rem;
+    font-size: 1.2rem;
+  }
+
+  .download-container > h1 {
+    padding: 0;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1441px) {
+  .download-container {
+    margin-top: 20px;
   }
 }

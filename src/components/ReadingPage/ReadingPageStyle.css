@@ -1,9 +1,6 @@
 .reading-container {
-  /* height:500px; */
   height: 1000px;
-  /* height: auto; */
   width: 85%;
-  /* background-color: rgba(246, 248, 248, 0.363); */
   background-color: rgba(0, 255, 255, 0);
   margin: auto;
   margin-top: 0px;
@@ -22,7 +19,8 @@
   font-weight: normal;
   font-size: 27px;
   margin: 0px;
-  margin-top: 40px;
+  padding: 0 18px 8px;
+  margin-top: 0px;
 }
 .pdf-display {
   margin: auto;

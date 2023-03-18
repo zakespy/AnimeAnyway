@@ -4,9 +4,9 @@
 
 .homebtn {
   background-color: rgba(219, 219, 219, 0.3);
-  height: 25px;
+  height: 22px;
   left: 45%;
-  margin-top: 618px;
+  margin-top: 610px;
   border-radius: 10px;
   padding: 8px;
   min-width: 40px;
@@ -17,7 +17,7 @@
 .homebtn:hover {
   background-color: rgb(188, 188, 188);
 }
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .channelHeader {
     border-radius: 20px;
     height: 600px;
@@ -44,10 +44,11 @@
     text-align: center;
     top: 75%;
     font-family: "Merriweather", serif;
-    font-size: 50px;
+    font-size: 48px;
     color: white;
     text-shadow: 2px 2px 8px black;
     position: absolute;
+    padding: 0 20px;
   }
   .channelHeader {
     background-position: 10% 3%;
@@ -56,6 +57,7 @@
 h1 {
   font-size: inherit;
   font-weight: normal;
+  padding: 0 20px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -101,7 +103,7 @@ h1 {
     margin-left: 5%;
     margin-right: 5%;
     font-family: "Merriweather", serif;
-    font-size: 40px;
+    font-size: 38px;
     color: white;
     text-shadow: 2px 2px 8px black;
     position: absolute;
@@ -117,17 +119,18 @@ h1 {
 @media screen and (max-width: 480px) {
   .channelName {
     text-align: center;
-    margin-top: 300px;
+    margin-top: 280px;
     margin-left: 5%;
     margin-right: 5%;
     font-family: "Merriweather", serif;
-    font-size: 40px;
+    font-size: 35px;
     color: white;
     text-shadow: 2px 2px 8px black;
     position: absolute;
+    padding: 0 18px;
   }
   .channelHeader {
-    height: 500px;
+    height: 480px;
     background-position: 50% 90%;
     background: linear-gradient(
         to bottom,
@@ -140,6 +143,6 @@ h1 {
       url("../../cl2-header.jpg");
   }
   .homebtn {
-    margin-top: 504px;
+    margin-top: 484px;
   }
 }
