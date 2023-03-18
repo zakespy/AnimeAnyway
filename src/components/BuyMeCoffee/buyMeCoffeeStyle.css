@@ -27,9 +27,10 @@
 }
 
 .text {
-  padding-top: 16px;
+  padding: 16px 0;
   font-size: larger;
   color: rgb(0, 0, 0);
+  margin: 0px;
 }
 .text2 {
   margin-top: 10px;

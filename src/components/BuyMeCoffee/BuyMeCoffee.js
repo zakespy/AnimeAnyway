@@ -4,13 +4,13 @@ import './buyMeCoffeeStyle.css';
 export default function BuyMeCoffee() {
   return (
     <>
-      <a href="https://www.buymeacoffee.com/animeanyway11" target="_blank" rel="noreferrer">
-        <div className="coffee">
+      <div className="coffee">
+        <a href="https://www.buymeacoffee.com/animeanyway11" target="_blank" rel="noreferrer">
           <strong>
             <p className='text'>Buy Me A Coffee</p>
           </strong>
-        </div>
-      </a>
+        </a>
+      </div>
       <a href="https://www.paypal.com/paypalme/animeanyway" target="_blank" rel="noreferrer">
         <div className="paypal">
           <strong>
