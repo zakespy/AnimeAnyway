@@ -93,8 +93,8 @@ export const translatedVolume = [
     path: '../../assets/file/Year 2 Volume 6.pdf',
     darkPath: '../../assets/file/Year 2 Volume 6.pdf',
     totalPage: 285,
-    pdf_size: 3766,
-    epub_size: 2034,
+    pdf_size: 40349,
+    epub_size: 41929,
     chapter: [
       {
         name: "Cover",
