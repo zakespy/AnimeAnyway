@@ -16,39 +16,28 @@ export default function Content() {
 
 
   const pdfDownload = () => {
+    const pdf = document.getElementById("pdf-btn");
+    pdf.onClick = () => { return }
+    pdf.style.backgroundColor = "rgba(255, 238, 238, 0.9)";
+    pdf.style.color = "black";
+    pdf.style.border = "none";
+    pdf.innerText = "Downloading..."
     fetch(`/assets/file/${translatedVolume[volume_index].name}.pdf`).then(
       (response) => {
-        const contentLength = response.headers.get('content-length');
-        let loaded = 0;
-        return new Response(
-          new ReadableStream({
-            start(controller) {
-              const reader = response.body.getReader();
-              read();
-              function read() {
-                reader.read()
-                  .then((progressEvent) => {
-                    console.log(contentLength)
-                    if (progressEvent.done) {
-                      controller.close();
-                      return;
-                    }
-                    loaded += progressEvent.value.byteLength;
-                    console.log(Math.round(loaded / contentLength * 100) + '%');
-                    controller.enqueue(progressEvent.value);
-                    read();
-                  })
-              }
-            }
-          }
-          ))
-        //    response.blob().then((blob) => {
-        //   const fileURL = window.URL.createObjectURL(blob);
-        //   let alink = document.createElement("a");
-        //   alink.href = fileURL;
-        //   alink.download = `${translatedVolume[volume_index].name}.pdf`;
-        //   alink.click();
-        // });
+        response.blob().then((blob) => {
+          const fileURL = window.URL.createObjectURL(blob);
+          let alink = document.createElement("a");
+          alink.href = fileURL;
+          alink.download = `${translatedVolume[volume_index].name}.pdf`;
+          alink.click();
+          pdf.innerText = `Download Complete!`
+          setTimeout(() => {
+            pdf.style.backgroundColor = "rgba(255, 101, 101, 0.9)";
+            pdf.style.color = "white";
+            pdf.innerText = "Download again?"
+            pdf.style.border = "1px solid black";
+          }, 2000);
+        });
       }
     );
   };
@@ -86,7 +75,7 @@ export default function Content() {
     <>
       <div className="download-container">
         <h1>Download {translatedVolume[volume_index].name} of Classroom Of The Elite</h1>
-        <button className="download-button" onClick={pdfDownload}>
+        <button className="download-button" id="pdf-btn" onClick={pdfDownload}>
           Download as .pdf
           <DownloadIcon
             sx={{ color: "white", margin: "0 0 0 1rem" }}
