@@ -318,43 +318,43 @@ export const translatedVolume = [
     darkPath: '../../assets/file/Year 2 Volume 9(dark).pdf',
     pdf_size: 33296,
     epub_size: 35109,
-    totalPage: 315,
+    totalPage: 343,
     chapter: [
       {
         name: "Cover",
         pageNo: 0
       },
       {
-        name: "index",
-        pageNo: 7
+        name: "Index",
+        pageNo: 8
       },
       {
         name: "Prologue",
-        pageNo: 9,
+        pageNo: 10,
       },
       {
         name: "Chapter 1",
-        pageNo: 12,
+        pageNo: 13,
       },
       {
         name: "Chapter 2",
-        pageNo: 67,
+        pageNo: 68,
       },
       {
         name: "Chapter 3",
-        pageNo: 121,
+        pageNo: 122,
       },
       {
         name: "Chapter 4",
-        pageNo: 182,
+        pageNo: 183,
       },
       {
         name: "Chapter 5",
-        pageNo: 219,
+        pageNo: 220,
       },
       {
         name: "Chapter 6",
-        pageNo: 273,
+        pageNo: 274,
       },
       {
         name: "Epilogue",
@@ -362,7 +362,11 @@ export const translatedVolume = [
       },
       {
         name: "Afterword",
-        pageNo: 136,
+        pageNo: 342,
+      },
+      {
+        name: "Thanks..",
+        pageNo: 343,
       },
     ],
   },

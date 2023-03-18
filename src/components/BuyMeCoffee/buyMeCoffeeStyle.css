@@ -1,9 +1,25 @@
 .coffee {
   height: 60px;
-  width: 65%;
+  width: 60%;
   background-color: rgb(255, 221, 0);
   margin: 20px auto;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.paypal {
+  height: 60px;
+  width: 60%;
+  background-image: linear-gradient(
+    to right,
+    rgb(1, 112, 186),
+    rgb(21, 71, 160)
+  );
+
+  margin: 5px auto;
+  margin-bottom: 30px;
   border-radius: 10px;
   text-align: center;
   justify-content: center;
@@ -15,9 +31,18 @@
   font-size: larger;
   color: rgb(0, 0, 0);
 }
+.text2 {
+  margin-top: 10px;
+  padding-top: 14px;
+  font-size: larger;
+  color: rgb(255, 255, 255);
+}
 
 @media only screen and (max-width: 600px) {
   .coffee {
+    width: 85%;
+  }
+  .paypal {
     width: 85%;
   }
 }

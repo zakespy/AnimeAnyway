@@ -24,10 +24,10 @@
 }
 
 .download-container > h1 {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 27px;
   padding: 0 3rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Bell MT", Georgia;
 }
 
 .download-button {
