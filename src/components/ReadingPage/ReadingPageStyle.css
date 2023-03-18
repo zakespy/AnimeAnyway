@@ -38,9 +38,6 @@
 .label-tab {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wr
-  
-  ap; */
 }
 
 .pageInput {
@@ -50,7 +47,7 @@
   margin: 10px;
   margin-right: 30px;
   position: absolute;
-  left: 26%;
+  left: 30%;
   top: 2.5%;
   display: flex;
   flex-direction: row;
@@ -82,7 +79,7 @@
   margin: 10px;
   position: absolute;
   top: 2.5%;
-  left: 22%;
+  left: 26%;
 }
 
 .ful-btn {
@@ -152,6 +149,14 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1600px) {
+  .pageInput {
+    left: 26%;
+  }
+  .fullscreeen-btn {
+    left: 22%;
+  }
+}
 @media screen and (max-width: 1400px) {
   .heading {
     margin-top: 0px;
@@ -218,7 +223,7 @@
     width: 100px;
     margin: 10px;
     position: absolute;
-    left: 30%;
+    left: 40%;
     top: 7%;
     display: flex;
     flex-direction: row;
@@ -237,7 +242,7 @@
     margin: 10px;
     position: absolute;
     top: 7%;
-    left: 13%;
+    left: 17%;
   }
 
   .theme-btn {
@@ -245,6 +250,9 @@
     position: absolute;
     top: 7%;
     left: 69%;
+  }
+  .dark_mode_2 {
+    left: 70%;
   }
 }
 

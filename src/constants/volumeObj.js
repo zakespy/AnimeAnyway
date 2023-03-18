@@ -101,6 +101,10 @@ export const translatedVolume = [
         pageNo: 0
       },
       {
+        name: "Index",
+        pageNo: 2
+      },
+      {
         name: "Prologue",
         pageNo: 3,
       },
@@ -151,6 +155,10 @@ export const translatedVolume = [
       {
         name: "Cover",
         pageNo: 0
+      },
+      {
+        name: "Index",
+        pageNo: 2
       },
       {
         name: "Prologue",
@@ -209,6 +217,10 @@ export const translatedVolume = [
         pageNo: 0
       },
       {
+        name: "Index",
+        pageNo: 3
+      },
+      {
         name: "Prologue",
         pageNo: 6,
       },
@@ -258,7 +270,7 @@ export const translatedVolume = [
       },
       {
         name: "Index",
-        pageNo: 7
+        pageNo: 5
       },
       {
         name: "Prologue",
