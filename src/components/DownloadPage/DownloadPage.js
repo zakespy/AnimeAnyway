@@ -16,35 +16,65 @@ export default function Content() {
 
 
   const pdfDownload = () => {
-    // using Java Script method to get PDF file
     fetch(`/assets/file/${translatedVolume[volume_index].name}.pdf`).then(
       (response) => {
-        response.blob().then((blob) => {
-          // Creating new object of PDF file
-          const fileURL = window.URL.createObjectURL(blob);
-          // Setting various property values
-          let alink = document.createElement("a");
-          // alink.href = translatedVolume[volume_index].driveURL;
-          alink.href = fileURL;
-          alink.download = `${translatedVolume[volume_index].name}.pdf`;
-          alink.click();
-        });
+        const contentLength = response.headers.get('content-length');
+        let loaded = 0;
+        return new Response(
+          new ReadableStream({
+            start(controller) {
+              const reader = response.body.getReader();
+              read();
+              function read() {
+                reader.read()
+                  .then((progressEvent) => {
+                    console.log(contentLength)
+                    if (progressEvent.done) {
+                      controller.close();
+                      return;
+                    }
+                    loaded += progressEvent.value.byteLength;
+                    console.log(Math.round(loaded / contentLength * 100) + '%');
+                    controller.enqueue(progressEvent.value);
+                    read();
+                  })
+              }
+            }
+          }
+          ))
+        //    response.blob().then((blob) => {
+        //   const fileURL = window.URL.createObjectURL(blob);
+        //   let alink = document.createElement("a");
+        //   alink.href = fileURL;
+        //   alink.download = `${translatedVolume[volume_index].name}.pdf`;
+        //   alink.click();
+        // });
       }
     );
   };
 
   const epubDownload = () => {
-    // using Java Script method to get PDF file
+    const epub = document.getElementById("epub-btn");
+    epub.onClick = () => { return }
+    epub.style.backgroundColor = "rgba(255, 238, 238, 0.9)";
+    epub.style.color = "black";
+    epub.style.border = "none";
+    epub.innerText = "Downloading..."
     fetch(`/assets/file/${translatedVolume[volume_index].name}.epub`).then(
       (response) => {
         response.blob().then((blob) => {
-          // Creating new object of PDF file
           const fileURL = window.URL.createObjectURL(blob);
-          // Setting various property values
           let alink = document.createElement("a");
           alink.href = fileURL;
           alink.download = `${translatedVolume[volume_index].name}.epub`;
           alink.click();
+          epub.innerText = `Download Complete!`
+          setTimeout(() => {
+            epub.style.backgroundColor = "rgba(255, 101, 101, 0.9)";
+            epub.style.color = "white";
+            epub.innerText = "Download again?"
+            epub.style.border = "1px solid black";
+          }, 2000);
         });
       }
     );
@@ -56,15 +86,6 @@ export default function Content() {
     <>
       <div className="download-container">
         <h1>Download {translatedVolume[volume_index].name} of Classroom Of The Elite</h1>
-        {/* <a
-            // href={path}
-            href={`../../assets/file/${translatedVolume[volume_index].name}.pdf`}
-            // target="_blank"
-            rel="noreferrer"
-            // attributes-list
-            // download={translatedVolume[volume_index].name}
-            download
-          > */}
         <button className="download-button" onClick={pdfDownload}>
           Download as .pdf
           <DownloadIcon
@@ -72,23 +93,13 @@ export default function Content() {
             fontSize="large"
           />
         </button>
-        {/* </a> */}
-        {/* <a
-            href={`../../assets/file/${translatedVolume[volume_index].name}.epub`}
-            // target="_blank"
-            // rel="noreferrer"
-            download ={`../../assets/file/${translatedVolume[volume_index].name}.epub`}
-          > */}
-        {/* <Link to="" target="_blank" download> */}
-        <button className="download-button" onClick={epubDownload}>
+        <button className="download-button" id="epub-btn" onClick={epubDownload}>
           Download as .epub
           <DownloadIcon
             sx={{ color: "white", margin: "0 0 0 1rem" }}
             fontSize="large"
           />
         </button>
-        {/* </Link> */}
-        {/* </a> */}
       </div>
     </>
   );
