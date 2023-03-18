@@ -21,7 +21,7 @@ export default function Content() {
     pdf.style.backgroundColor = "rgba(255, 238, 238, 0.9)";
     pdf.style.color = "black";
     pdf.style.border = "none";
-    pdf.innerText = "Downloading..."
+    pdf.innerText = "Downloading, please wait."
     fetch(`/assets/file/${translatedVolume[volume_index].name}.pdf`).then(
       (response) => {
         response.blob().then((blob) => {
@@ -36,7 +36,7 @@ export default function Content() {
             pdf.style.color = "white";
             pdf.innerText = "Download again?"
             pdf.style.border = "1px solid black";
-          }, 2000);
+          }, 3000);
         });
       }
     );
@@ -48,7 +48,7 @@ export default function Content() {
     epub.style.backgroundColor = "rgba(255, 238, 238, 0.9)";
     epub.style.color = "black";
     epub.style.border = "none";
-    epub.innerText = "Downloading..."
+    epub.innerText = "Downloading, please wait"
     fetch(`/assets/file/${translatedVolume[volume_index].name}.epub`).then(
       (response) => {
         response.blob().then((blob) => {
@@ -63,7 +63,7 @@ export default function Content() {
             epub.style.color = "white";
             epub.innerText = "Download again?"
             epub.style.border = "1px solid black";
-          }, 2000);
+          }, 3000);
         });
       }
     );

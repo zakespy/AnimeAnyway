@@ -54,7 +54,7 @@
     background-position: 10% 3%;
   }
 }
-h1 {
+.channelName > h1 {
   font-size: inherit;
   font-weight: normal;
   padding: 0 20px;
