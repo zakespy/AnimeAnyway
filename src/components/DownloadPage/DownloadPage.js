@@ -40,7 +40,7 @@ export default function Content() {
                       return;
                     }
                     loaded += progressEvent.value.byteLength;
-                    console.log(Math.round(loaded / pdf_len * 100));
+                    setpdfprogress(Math.round(loaded / pdf_len * 100));
                     controller.enqueue(progressEvent.value);
                     read();
                   })
@@ -75,11 +75,10 @@ export default function Content() {
     epub.style.color = "black";
     epub.style.border = "none";
     epub.innerText = "Downloading, " + epubprogress + "%";
-
+    const epub_len = translatedVolume[volume_index].epub_size * 1024;
     fetch(`/assets/file/${translatedVolume[volume_index].name}.epub`).then(
       response => {
         console.log(response)
-        const content_len = response.headers.get('content-length')
         var loaded = 0;
         return new Response(
           new ReadableStream({
@@ -94,7 +93,7 @@ export default function Content() {
                       return;
                     }
                     loaded += progressEvent.value.byteLength;
-                    setepubprogress(Math.round(loaded / content_len * 100));
+                    setepubprogress(Math.round(loaded / epub_len * 100));
                     controller.enqueue(progressEvent.value);
                     read();
                   })
