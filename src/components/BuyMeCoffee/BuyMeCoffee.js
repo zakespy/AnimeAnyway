@@ -4,20 +4,20 @@ import './buyMeCoffeeStyle.css';
 export default function BuyMeCoffee() {
   return (
     <>
-      <div className="coffee">
-        <strong>
-          <a href="https://www.buymeacoffee.com/animeanyway11" target="_blank" rel="noreferrer">
+      <a href="https://www.buymeacoffee.com/animeanyway11" target="_blank" rel="noreferrer">
+        <div className="coffee">
+          <strong>
             <p className='text'>Buy Me A Coffee</p>
-          </a>
-        </strong>
-      </div>
-      <div className="paypal">
-        <strong>
-          <a href="https://www.paypal.com/paypalme/animeanyway" target="_blank" rel="noreferrer">
+          </strong>
+        </div>
+      </a>
+      <a href="https://www.paypal.com/paypalme/animeanyway" target="_blank" rel="noreferrer">
+        <div className="paypal">
+          <strong>
             <p className='text2'>PayPal</p>
-          </a>
-        </strong>
-      </div>
+          </strong>
+        </div>
+      </a>
     </>
   );
 }
