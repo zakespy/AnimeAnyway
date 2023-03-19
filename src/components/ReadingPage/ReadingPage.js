@@ -4,7 +4,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
-import { SpecialZoomLevel, ThemeContext, Viewer, ViewMode, Worker } from "@react-pdf-viewer/core";
+import { ProgressBar, SpecialZoomLevel, ThemeContext, Viewer, ViewMode, Worker } from "@react-pdf-viewer/core";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import {
@@ -87,6 +87,7 @@ export default function ReadingPage() {
       setPageNumber(document.getElementById('currpage').innerText)
     }
   }
+
   return (
     <div className="maindiv">
       <CurrentPageLabel>
@@ -199,6 +200,11 @@ export default function ReadingPage() {
                 )
               }
               ViewMode={ViewMode.SinglePage}
+              renderLoader={(percentages: number) => (
+                <div style={{ width: '240px' }}>
+                  <ProgressBar progress={Math.round(percentages)} />
+                </div>
+              )}
             />
           </Worker>
           <div className="scrollToTop" onClick={() => { jumpToPage(0) }}>
